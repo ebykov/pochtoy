@@ -1,0 +1,611 @@
+@import 'fonts'
+@import 'mq'
+@import 'functions'
+@import 'keyframes'
+
+$colors = {
+  red: #FF3939,
+  yellow: #FFE750,
+}
+
+.pochtoy
+  position: relative
+  z-index: 99
+  width: 1060px
+  max-width: 100%
+  font-family: 'Roboto', monospace
+  font-size: 16px
+  line-height: normal
+  text-size-adjust: 100%
+
+  & *
+  & *:before
+  & *:after
+    box-sizing: border-box
+
+  svg
+    display block
+    fill currentColor
+    pointer-events none
+
+  & b
+    font-weight: 700
+
+  & button
+    font-family: inherit
+    outline: none
+    cursor: pointer
+    appearance: none
+
+  &-btn
+    width: 150px
+    height: 45px
+    color: $colors.red
+    font-family: Montserrat, sans-serif
+    font-size: 17px
+    font-weight: 700
+    border: 3px solid $colors.red
+    background-color: $colors.yellow
+    box-shadow: none
+    transition: opacity .2s
+
+    &:hover
+      opacity: .6
+
+      @media (hover none), (hover on-demand)
+        opacity: 1
+
+  &-hands
+    position: absolute
+    z-index: 1
+    top: 5%
+    bottom: 0
+    margin: auto 0
+    width: 200px
+
+    @media $mq.desktop
+      width: 248px
+      height: 471px
+
+    &--l
+      left: 0
+
+    &--r
+      right: 0
+      transform: scale(-1,1)
+
+  &__logo
+    position: absolute
+    z-index: 2
+    top: 10px
+    right: 20px
+    border: 0 !important
+    transition: opacity .2s
+
+    @media (min-width: 640px)
+      top: 42px
+      right: 35px
+
+    &:hover
+      opacity: .6
+
+      @media (hover none), (hover on-demand)
+        opacity: 1
+
+  &__inner
+    position: relative
+    z-index: 1
+    display: flex
+    width: 100%
+    padding: 10px
+    border: 4px solid #000
+    background-color: #fff
+    //overflow: hidden
+
+    @media (min-width: 640px)
+      min-height: 600px
+
+    &--result
+      width: 640px
+      max-width: 100%
+      padding: 0
+      margin: 0 auto
+      border: 0
+      background-color: transparent
+
+  &-enter
+    position: relative
+    z-index: 2
+    width: 360px
+    max-width: 100%
+    margin-top: 40px
+
+    @media (min-width: 640px)
+      margin: auto 0 auto 50px
+
+    @media $mq.desktop
+      margin: auto
+
+    &__title
+      color: $colors.red
+      font-family: Montserrat, sans-serif
+      font-weight: 700
+      font-size: 26px
+      line-height: 1.355em
+      text-transform: uppercase
+
+      @media $mq.iphone6
+        font-size: 31px
+
+    &__text
+      margin-top: 16px
+      line-height: 1.5em
+      opacity: .6
+
+      @media $mq.iphone6
+        font-size: 18px
+
+      & p
+        padding: 0
+        margin: 0 !important
+
+        &:not(:last-child)
+          margin-bottom: 0.833em !important
+
+    &__btn
+      margin-top: 20px
+
+      @media $mq.iphone6
+        margin-top: 40px
+
+  &-q
+    position: relative
+    width: 560px
+    max-width: 100%
+    margin: 40px auto 0
+
+    @media (min-width: 640px)
+      margin-top: 60px
+
+    &__promo
+      position: absolute
+      z-index: 1
+      top: 220px
+      left: 140px
+      width: 320px
+      max-width: 100%
+      padding: 20px 26px 22px
+      border: 4px solid #000
+      background-color: #fff
+
+    &__promo-close
+      position: absolute
+      top: 4px
+      right: 4px
+      width: 16px
+      height: 16px
+      transform rotate(45deg)
+      cursor: pointer
+      transition opacity .2s
+
+      &:hover
+        opacity: .6
+
+        @media (hover none), (hover on-demand)
+          opacity: 1
+
+      &::before
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        background-color: #000
+
+      &::before
+        width: 2px
+        height: 100%
+
+      &::after
+        width: 100%
+        height: 2px
+
+    &__promo-text
+      color: #000
+      font-size: 12px
+      line-height: 1.5em
+
+      & p
+        padding: 0
+        margin: 0 !important
+
+        &:not(:last-child)
+          margin-bottom: 0.833em !important
+
+      & a
+        color: currentColor !important
+        border-bottom: 1px solid currentColor !important
+        transition opacity .2s
+
+        &:hover
+          opacity: .6
+
+          @media (hover none), (hover on-demand)
+            opacity: 1
+
+    &__body
+      width: 310px
+      max-width: 100%
+
+    &__title
+      color: $colors.red
+      font-family: Montserrat, sans-serif
+      font-size: 20px
+      font-weight: 700
+      line-height: 1.467em
+
+      @media $mq.desktop
+        font-size: 30px
+
+    &__subtitle
+      margin-top: 12px
+      color: #808080
+      line-height: 1.2em
+
+      @media $mq.desktop
+        font-size: 24px
+
+    &__lot
+      position: relative
+      width: 225px
+      margin: 20px auto 0
+
+      @media (min-width: 640px)
+        position: absolute
+        top: 0
+        right: 0
+        margin: 0
+
+    &__options
+      display: flex
+      flex-wrap wrap
+      width: 225px
+      padding-top: 20px
+      margin: 0 auto
+
+      @media (min-width: 640px)
+        display: block
+        width: auto
+        padding-top: 40px
+        margin: 0
+
+    &__option
+      width: 50%
+      padding: 10px 0 0 20px
+
+      &--full
+        width: 100%
+
+      @media (min-width: 640px)
+        width: auto
+        padding: 0
+
+        &:not(:last-child)
+          margin-bottom: 20px
+
+    &__btn
+      margin-top: 30px
+      text-align: center
+
+      @media (min-width: 640px)
+        text-align: left
+
+    &__notice
+      width: 160px
+      max-width: 100%
+      margin: 10px auto 0
+      color: #808080
+      font-size: 14px
+      text-align: center
+
+  &-option
+    position: relative
+    color: #000
+    cursor: pointer
+
+    &.is-active
+      color: $colors.red
+
+    &__btn
+      position: absolute
+      z-index: 1
+      top: 4px
+      left: 0
+      width: 16px
+      height: 16px
+      border: 2px solid currentColor
+      border-radius: 100%
+
+      @media (min-width: 640px)
+        top: 6px
+        width: 20px
+        height: 20px
+
+      ^[-1].is-active &
+        &::after
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+          width: 8px
+          height: 8px
+          border-radius: 100%
+          background-color currentColor
+
+          @media (min-width: 640px)
+            width: 10px
+            height: 10px
+
+    &__label
+      margin-left: 30px
+      font-size: 22px
+
+      @media (min-width: 640px)
+        margin-left: 42px
+        font-size: 28px
+
+  &-lot
+    border: 4px solid currentColor
+
+    &__body
+      position: relative
+      height: 260px
+      background-color: $colors.yellow
+      background-image: url('https://leonardo.osnova.io/f4966422-246f-7497-2568-5b47f689318a/')
+      background-position: center calc(100% + 20px)
+      background-repeat: no-repeat
+
+      @media (min-width: 640px)
+        height: 306px
+        background-position: center bottom
+
+    &__img
+      position: absolute
+      bottom: 50px
+      left: 55px
+
+      @media (min-width: 640px)
+        bottom: 70px
+
+    &__bottom
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      height: 50px
+      padding-bottom: 12px
+      background-color: #000
+
+      @media (min-width: 640px)
+        height: 70px
+        padding-bottom: 20px
+
+    &__price
+      margin-bottom: -2px
+      color: $colors.yellow
+      font-family: Montserrat, sans-serif
+      font-size: 28px
+      font-weight: 700
+      line-height: 1
+
+      &--old
+        margin-right: 8px
+        margin-bottom: 0
+        font-size: 14px
+        text-decoration: line-through
+
+      &--new
+        color: $colors.red
+
+        &::after
+          content: '.-'
+
+  &-crane
+    position: absolute
+    z-index: 1
+    top: -274px
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 57px
+
+    @media (min-width: 640px)
+      top: -92px
+
+    &::before
+      content: ''
+      position: absolute
+      bottom: 100%
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 2px
+      height: 100px
+      background-color: #FF0C0C
+
+    &__main
+      display: block
+      width: 100%
+
+  &-result
+    max-width: 100%
+
+    &__main
+      border: 4px solid #000
+
+    &__bottom
+      margin-top: 8px
+      padding: 10px 14px
+      border: 5px solid #000
+      background-color: #fff
+
+      @media $mq.not_mobile
+        padding: 40px 65px 45px
+
+    &__block
+      position: relative
+      padding: 50px 10px 10px
+      background-color: #fff
+      overflow: hidden
+
+      @media $mq.not_mobile
+        padding: 35px 20px 20px 60px
+
+      &--a
+        padding: 10px
+        background-color: #000
+
+        @media $mq.not_mobile
+          min-height: 220px
+          padding: 35px 20px 20px 60px
+
+    &__img
+      position: absolute
+      bottom: 0
+      right: 0
+
+      &--a
+        top: 0
+        bottom: auto
+
+    &__title
+      position: relative
+      z-index: 1
+      font-family: Montserrat, sans-serif
+      font-size: 24px
+      font-weight: 700
+      line-height: 1.5em
+
+      @media $mq.not_mobile
+        font-size: 30px
+
+      &--a
+        color: #fff
+
+    &__share
+      position: relative
+      z-index: 1
+      margin-top: 14px
+      color: #fff
+
+      &--dark
+        color: #000
+
+    &__text
+      color: #000
+      line-height: 1.5em
+
+      & p
+        padding: 0
+        margin: 0 !important
+
+        &:not(:last-child)
+          margin-bottom: 0.833em !important
+
+      & a
+        color: currentColor !important
+        border-bottom: 1px solid currentColor !important
+        transition opacity .2s
+
+        &:hover
+          opacity: .6
+
+          @media (hover none), (hover on-demand)
+            opacity: 1
+
+    &__btn
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      min-width: 170px
+      height: 45px
+      padding: 0 10px
+      margin-top: 20px
+      color: #000 !important
+      font-family: Montserrat, sans-serif
+      font-weight: 700
+      line-height: 1
+      border: 3px solid #000 !important
+      transition opacity .2s
+
+      @media $mq.not_mobile
+        margin-top: 30px
+
+      &:hover
+        opacity: .6
+
+        @media (hover none), (hover on-demand)
+          opacity: 1
+
+  .likely
+    &--custom
+      display: flex
+
+    &__widget
+      flex-shrink: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 58px
+      height: 44px
+      color: currentColor
+      border: 1px solid currentColor
+      background-color: transparent
+      cursor: pointer
+      transition: opacity .2s
+
+      &:not(:last-child)
+        margin-right: 10px
+
+      &:hover
+        opacity: .6
+
+        @media (hover none), (hover on-demand)
+          opacity: 1
+
+      &--vkontakte
+        padding: 0 13px 0 10px
+
+    &__counter
+      display: none
+
+    &__icon
+      background-color: transparent
+
+      & svg
+        display: block
+        width: 25px
+        height: @width
+        fill: currentColor
+
+      &--facebook
+        & svg
+          width: 20px
+          height: @width
+
+      &--vkontakte
+
+        @media $mq.not_mobile
+          margin-right: 10px
+
+    &__button
+      display: none
+      line-height: 1
+
+      @media $mq.not_mobile
+        display: block
