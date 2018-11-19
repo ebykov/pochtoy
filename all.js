@@ -3119,125 +3119,6 @@ var index = { Provider: Provider, connect: connect, connectAdvanced: connectAdva
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _redux = __webpack_require__(10);
-
-var _data = __webpack_require__(26);
-
-var _data2 = _interopRequireDefault(_data);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-var results = [{
-  80: 10,
-  60: 15,
-  40: 0,
-  20: 10,
-  0: 15
-}, {
-  80: 1,
-  60: 10,
-  40: 19,
-  20: 8,
-  0: 12
-}, {
-  80: 4,
-  60: 15,
-  40: 11,
-  20: 8,
-  0: 12
-}, {
-  80: 8,
-  60: 11,
-  40: 13,
-  20: 17,
-  0: 1
-}, {
-  80: 0,
-  60: 10,
-  40: 17,
-  20: 21,
-  0: 2
-}, {
-  80: 4,
-  60: 0,
-  40: 13,
-  20: 9,
-  0: 24
-}, {
-  80: 38,
-  60: 6,
-  40: 3,
-  20: 2,
-  0: 1
-}, {
-  80: 10,
-  60: 10,
-  40: 10,
-  20: 10,
-  0: 10
-}];
-
-var initialTestState = {
-  status: '',
-  params: {},
-  question: _data2.default.questions[0],
-  questionsCount: _data2.default.questions.length,
-  activeIndex: 0,
-  answers: [],
-  results: results
-};
-
-var restartTestState = {
-  status: 'START',
-  activeIndex: 0,
-  question: _data2.default.questions[0],
-  answers: []
-};
-
-var testReducer = function testReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialTestState;
-  var action = arguments[1];
-
-  switch (action.type) {
-    case 'TEST_PARAMS':
-      return _extends({}, state, { params: action.params });
-    case 'TEST_STATUS':
-      return _extends({}, state, { status: action.status });
-    case 'TEST_ANSWER':
-      return _extends({}, state, { answers: [].concat(_toConsumableArray(state.answers), [action.answer]) });
-    case 'TEST_NEXT':
-      var index = state.activeIndex + 1;
-      return _extends({}, state, {
-        question: _data2.default.questions[index],
-        activeIndex: index
-      });
-    case 'TEST_RESTART':
-      return _extends({}, state, restartTestState);
-  }
-  return state;
-};
-
-var reducers = (0, _redux.combineReducers)({
-  testState: testReducer
-});
-
-exports.default = (0, _redux.createStore)(reducers);
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.sendPageView = exports.sendEvent = undefined;
@@ -3289,6 +3170,133 @@ var sendPageView = exports.sendPageView = function sendPageView() {
 };
 
 /***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _redux = __webpack_require__(10);
+
+var _data = __webpack_require__(26);
+
+var _data2 = _interopRequireDefault(_data);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var results = [{
+  80: 10,
+  60: 15,
+  40: 0,
+  20: 10,
+  10: 5,
+  0: 15
+}, {
+  80: 1,
+  60: 9,
+  40: 19,
+  20: 8,
+  10: 6,
+  0: 12
+}, {
+  80: 6,
+  60: 16,
+  40: 12,
+  20: 8,
+  10: 0,
+  0: 13
+}, {
+  80: 8,
+  60: 11,
+  40: 10,
+  20: 15,
+  10: 10,
+  0: 1
+}, {
+  80: 0,
+  60: 10,
+  40: 17,
+  20: 5,
+  10: 21,
+  0: 2
+}, {
+  80: 4,
+  60: 0,
+  40: 13,
+  20: 10,
+  10: 4,
+  0: 24
+}, {
+  80: 38,
+  60: 6,
+  40: 3,
+  20: 5,
+  10: 3,
+  0: 1
+}, {
+  80: 10,
+  60: 10,
+  40: 10,
+  20: 10,
+  10: 5,
+  0: 10
+}];
+
+var initialTestState = {
+  status: '',
+  params: {},
+  question: _data2.default.questions[0],
+  questionsCount: _data2.default.questions.length,
+  activeIndex: 0,
+  answers: [],
+  results: results
+};
+
+var restartTestState = {
+  status: 'START',
+  activeIndex: 0,
+  question: _data2.default.questions[0],
+  answers: []
+};
+
+var testReducer = function testReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialTestState;
+  var action = arguments[1];
+
+  switch (action.type) {
+    case 'TEST_PARAMS':
+      return _extends({}, state, { params: action.params });
+    case 'TEST_STATUS':
+      return _extends({}, state, { status: action.status });
+    case 'TEST_ANSWER':
+      return _extends({}, state, { answers: [].concat(_toConsumableArray(state.answers), [action.answer]) });
+    case 'TEST_NEXT':
+      var index = state.activeIndex + 1;
+      return _extends({}, state, {
+        question: _data2.default.questions[index],
+        activeIndex: index
+      });
+    case 'TEST_RESTART':
+      return _extends({}, state, restartTestState);
+  }
+  return state;
+};
+
+var reducers = (0, _redux.combineReducers)({
+  testState: testReducer
+});
+
+exports.default = (0, _redux.createStore)(reducers);
+
+/***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3296,22 +3304,22 @@ var sendPageView = exports.sendPageView = function sendPageView() {
  * Social network services
  */
 
-var Service = __webpack_require__(44),
+var Service = __webpack_require__(43),
     utils   = __webpack_require__(4),
-    svg     = __webpack_require__(45);
+    svg     = __webpack_require__(44);
 
 var services = {
-    odnoklassniki: __webpack_require__(46),
-    vkontakte:     __webpack_require__(47),
-    facebook:      __webpack_require__(48),
-    twitter:       __webpack_require__(49),
-    gplus:         __webpack_require__(50),
-    pocket:        __webpack_require__(51),
-    telegram:      __webpack_require__(52),
-    whatsapp:      __webpack_require__(53),
-    viber:         __webpack_require__(54),
-    email:         __webpack_require__(55),
-    more:          __webpack_require__(56)
+    odnoklassniki: __webpack_require__(45),
+    vkontakte:     __webpack_require__(46),
+    facebook:      __webpack_require__(47),
+    twitter:       __webpack_require__(48),
+    gplus:         __webpack_require__(49),
+    pocket:        __webpack_require__(50),
+    telegram:      __webpack_require__(51),
+    whatsapp:      __webpack_require__(52),
+    viber:         __webpack_require__(53),
+    email:         __webpack_require__(54),
+    more:          __webpack_require__(55)
 };
 
 utils.each(services, function (service, key) {
@@ -4990,11 +4998,11 @@ var _app = __webpack_require__(24);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _store = __webpack_require__(7);
+var _store = __webpack_require__(8);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _analytics = __webpack_require__(8);
+var _analytics = __webpack_require__(7);
 
 var Analytics = _interopRequireWildcard(_analytics);
 
@@ -5143,7 +5151,7 @@ var _question = __webpack_require__(37);
 
 var _question2 = _interopRequireDefault(_question);
 
-var _result = __webpack_require__(39);
+var _result = __webpack_require__(38);
 
 var _result2 = _interopRequireDefault(_result);
 
@@ -5212,8 +5220,11 @@ var App = function (_Component) {
         (0, _preact.h)(
           'a',
           { href: 'https://www.pochtoy.com/', target: '_blank', className: 'pochtoy__logo' },
-          (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/abb1ef97-1e09-1f34-11c9-b220c483ede9/',
-            srcSet: 'https://leonardo.osnova.io/1346cc38-ba1c-d42e-5a73-fdb4f1de2e07/ 2x', alt: '' })
+          (0, _preact.h)(
+            'svg',
+            { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 1954 667' },
+            (0, _preact.h)('path', { d: 'M320 667l37-20V325l-37 20v322zM395 621l37-20V279l-37 20v322zM476 579l37-20V237l-37 20v322zM553 532l37-20V190l-37 20v322zM530 116L249 277l34 20 278-163zM218 258L496 95l-31-18-281 161zM148 220L426 57l-31-18-281 161zM358 18L327 0 46 161l34 20zM0 195v42l282 162-1-42zM0 283v42l282 162-1-42zM0 375v42l282 162-1-42zM0 461v42l282 162-1-42zM716 398h-33v15a47.87 47.87 0 0 1-.77 9 39.48 39.48 0 0 1-1.77 6.74 27.85 27.85 0 0 1-2.26 4.57 29.43 29.43 0 0 1-1.8 2.74 3.8 3.8 0 0 1-.78.93H673v19h10V446h29v10h10v-19h-6v-39zm-10 39h-20.2l.83-.91a19.07 19.07 0 0 0 1.83-2.76 39.16 39.16 0 0 0 2.17-4.5 35.57 35.57 0 0 0 1.72-6.82 49.68 49.68 0 0 0 .64-9v-5h13v29zM754.73 397.39a25.35 25.35 0 0 0-18.36 7.27 24.29 24.29 0 0 0 0 35.08 26.77 26.77 0 0 0 36.72 0 24.29 24.29 0 0 0 0-35.08 25.35 25.35 0 0 0-18.36-7.27zm10.84 35.93a15.27 15.27 0 0 1-21.68 0 16.11 16.11 0 0 1 0-22.23 15.23 15.23 0 0 1 21.68 0 16.11 16.11 0 0 1 0 22.23zM828.57 431.72a10.41 10.41 0 0 1-1.73 1.73 25.42 25.42 0 0 1-2.76 2 16.18 16.18 0 0 1-3.93 1.69 17.16 17.16 0 0 1-5 .71 15.64 15.64 0 1 1 0-31.28 15.42 15.42 0 0 1 4.75.75 17.35 17.35 0 0 1 3.75 1.63 15.73 15.73 0 0 1 2.64 2 15.32 15.32 0 0 1 1.56 1.64l.55.75 6.47-6.47-.76-1a15.75 15.75 0 0 0-2.41-2.36 38.67 38.67 0 0 0-3.85-2.79 21.31 21.31 0 0 0-5.56-2.37 26.77 26.77 0 0 0-25.52 6.29 24.29 24.29 0 0 0 0 35.08 26.5 26.5 0 0 0 25.57 6.26 26.1 26.1 0 0 0 5.61-2.27 25.63 25.63 0 0 0 4-2.89 27.77 27.77 0 0 0 2.42-2.29 12.36 12.36 0 0 0 .81-1L829.1 431zM878 398h-37v10h13v38h10v-38h14v-10zM896.63 398l-18.73 48h10.89l4.08-11h18.36l4.08 11h10.89l-18.73-48h-10.86zm-.37 28l5.81-15.64 5.78 15.64h-11.59zM970 424.58a14.42 14.42 0 0 0-2.39-2.14 16.09 16.09 0 0 0-1.88-1.23c-.34-.17-.63-.29-.85-.38l.56-.33a8.39 8.39 0 0 0 1.34-1.15 16.84 16.84 0 0 0 1.64-1.94 9.55 9.55 0 0 0 1.36-2.84 12.06 12.06 0 0 0 .53-3.6 11.88 11.88 0 0 0-4.23-9 15.6 15.6 0 0 0-10.71-4H935v48h21.54a16.66 16.66 0 0 0 11.62-4.12 12.82 12.82 0 0 0 4.55-9.83 11 11 0 0 0-.85-4.3 11.54 11.54 0 0 0-1.86-3.14zM945 407h9.68a5.5 5.5 0 0 1 4 1.34 4.83 4.83 0 0 1 1.46 3.69 4.74 4.74 0 0 1-1.46 3.65 5.5 5.5 0 0 1-4 1.32H945v-10zm15.67 29a6.65 6.65 0 0 1-4.63 2h-11v-13h11a6.5 6.5 0 0 1 4.63 1.9 6.53 6.53 0 0 1 0 9.1zM1024.98 398h-11.88L994 419.14V398h-10v48h10v-13.61l6.31-6.78 14.15 20.39h11.88l-19.02-28.08 17.66-19.92zM1047.71 398L1029 446h10.89l4.08-11h18.36l4.08 11h10.89l-18.73-48h-10.86zm-.37 28l5.81-15.64 5.78 15.64h-11.59zM1097 408h14v38h10v-38h14v-10h-38v10zM1164.4 397.39a25.35 25.35 0 0 0-18.36 7.27 24.29 24.29 0 0 0 0 35.08 26.77 26.77 0 0 0 36.72 0 24.29 24.29 0 0 0 0-35.08 25.35 25.35 0 0 0-18.36-7.27zm10.84 35.93a15.27 15.27 0 0 1-21.68 0 16.11 16.11 0 0 1 0-22.23 15.23 15.23 0 0 1 21.68 0 16.11 16.11 0 0 1 .01 22.23zM1236.75 424.58a14.5 14.5 0 0 0-2.39-2.14 16 16 0 0 0-1.88-1.23q-.51-.25-.85-.38l.56-.33a8.34 8.34 0 0 0 1.34-1.15 16.93 16.93 0 0 0 1.64-1.94 9.55 9.55 0 0 0 1.36-2.84 12.06 12.06 0 0 0 .53-3.6 11.88 11.88 0 0 0-4.23-9 15.6 15.6 0 0 0-10.71-4H1202v48h21.3a16.65 16.65 0 0 0 11.62-4.12 12.82 12.82 0 0 0 4.55-9.83 11 11 0 0 0-.85-4.3 11.52 11.52 0 0 0-1.87-3.14zM1212 407h9.44a5.5 5.5 0 0 1 4 1.34 4.84 4.84 0 0 1 1.46 3.69 4.74 4.74 0 0 1-1.46 3.65 5.5 5.5 0 0 1-4 1.32H1212v-10zm15.44 29a6.65 6.65 0 0 1-4.63 2H1212v-13h10.8a6.5 6.5 0 0 1 4.63 1.9 6.53 6.53 0 0 1 .01 9.1zM1262.86 398l-18.73 48H1255l4.08-11h18.36l4.08 11h10.89l-18.73-48h-10.86zm-.37 28l5.81-15.64 5.78 15.64h-11.58zM1321.25 398H1301v48h10v-16h10.25c4.91 0 9-1.35 12.19-4.42a14.92 14.92 0 0 0 4.81-11.3 15.41 15.41 0 0 0-4.83-11.54 17.06 17.06 0 0 0-12.17-4.74zm4.76 21.12a7 7 0 0 1-5.1 1.88H1311v-13h9.91a6.89 6.89 0 0 1 5.1 1.77 6.38 6.38 0 0 1-.01 9.35zM1372.51 397.39a25.35 25.35 0 0 0-18.36 7.27 24.29 24.29 0 0 0 0 35.08 26.77 26.77 0 0 0 36.72 0 24.29 24.29 0 0 0 0-35.08 25.35 25.35 0 0 0-18.36-7.27zm10.84 35.93a15.27 15.27 0 0 1-21.68 0 16.11 16.11 0 0 1 0-22.23 15.23 15.23 0 0 1 21.68 0 16.11 16.11 0 0 1 0 22.23zM1444.85 424.58a14.5 14.5 0 0 0-2.39-2.14 16 16 0 0 0-1.88-1.23q-.51-.25-.85-.38l.56-.33a8.34 8.34 0 0 0 1.34-1.15 16.93 16.93 0 0 0 1.64-1.94 9.55 9.55 0 0 0 1.36-2.84 12.06 12.06 0 0 0 .53-3.6 11.88 11.88 0 0 0-4.23-9 15.6 15.6 0 0 0-10.71-4H1410v48h21.41a16.65 16.65 0 0 0 11.62-4.12 12.82 12.82 0 0 0 4.55-9.83 11 11 0 0 0-.85-4.3 11.52 11.52 0 0 0-1.88-3.14zM1420 407h9.55a5.5 5.5 0 0 1 4 1.34A4.84 4.84 0 0 1 1435 412a4.74 4.74 0 0 1-1.46 3.65 5.5 5.5 0 0 1-4 1.32H1420V407zm15.54 29a6.65 6.65 0 0 1-4.63 2H1420v-13h10.91a6.5 6.5 0 0 1 4.63 1.9 6.53 6.53 0 0 1 0 9.1zM1485 428.67V398h-10v48h8.79l23.21-30.25V446h10v-48h-8.4l-23.6 30.67zM1561.88 424.65a13.85 13.85 0 0 0-2.67-2.21 16.1 16.1 0 0 0-2.14-1.23l-.95-.38.73-.27a6.63 6.63 0 0 0 1.78-1 21.72 21.72 0 0 0 2.08-1.84 8.63 8.63 0 0 0 1.81-2.92 11 11 0 0 0 .75-4.12q0-5.38-4.76-9.31t-12.6-3.93a23.68 23.68 0 0 0-6.08.78 25 25 0 0 0-4.76 1.69 20 20 0 0 0-3.4 2.17q-1.59 1.26-2.08 1.74a7.87 7.87 0 0 0-.68.75L1535 411l1.23-1.16a13.19 13.19 0 0 1 3.59-2.16 12.27 12.27 0 0 1 5-1.1 9.06 9.06 0 0 1 5.53 1.46 4.41 4.41 0 0 1 1.94 3.65 4.66 4.66 0 0 1-1.84 3.78 8.49 8.49 0 0 1-5.3 1.55H1539v9h6.56c2.81 0 4.93.38 6.36 1.53a5.26 5.26 0 0 1-.17 8.59 10.57 10.57 0 0 1-6.52 1.74 15.46 15.46 0 0 1-4.12-.56 17.43 17.43 0 0 1-3.29-1.22 15.85 15.85 0 0 1-2.46-1.56 19.11 19.11 0 0 1-1.49-1.23l-.53-.53-6.14 6.11.76.9a17.38 17.38 0 0 0 2.34 2 37.1 37.1 0 0 0 3.7 2.39 22.16 22.16 0 0 0 5.3 2 25.69 25.69 0 0 0 6.59.85q8.87 0 14-4.15a12.62 12.62 0 0 0 5.1-10.13 11.48 11.48 0 0 0-1-4.7 12.24 12.24 0 0 0-2.11-3.4zM1605.59 398l-18.73 48h10.89l4.08-11h18.36l4.08 11h10.89l-18.73-48h-10.86zm-.37 28l5.81-15.64 5.78 15.64h-11.59zM1669.42 418.75L1653.11 398H1644v48h10v-31.61l15.48 19.36 15.52-19.49V446h10v-48h-9.11l-16.47 20.75zM1719 426h20v-9h-20v-9h25v-10h-35v48h36v-9h-26v-11zM1776.32 398H1756v48h10v-16h10.32c4.91 0 9-1.35 12.19-4.42a14.92 14.92 0 0 0 4.81-11.3 15.41 15.41 0 0 0-4.83-11.54 17.06 17.06 0 0 0-12.17-4.74zm4.76 21.12A7 7 0 0 1 1776 421h-10v-13h10a6.89 6.89 0 0 1 5.1 1.77 6.38 6.38 0 0 1-.01 9.35zM1815 428.67V398h-11v48h9.33l23.67-30.25V446h10v-48h-8.87L1815 428.67zM1901.96 398h-11.89L1871 419.14V398h-10v48h10v-13.61l6.3-6.78 14.13 20.39h11.89l-19.03-28.08 17.67-19.92zM1945.07 398L1922 428.67V398h-11v48h9.27l23.73-30.25V446h10v-48h-8.93zM764.26 285.65a37 37 0 0 0 5.62-20.44q0-11.86-5.62-20.52c-3.75-5.78-9.1-10-16-13.18S733.1 227 723.67 227H678v106h24v-29h21.67a59.89 59.89 0 0 0 24.55-4.8 36.15 36.15 0 0 0 16.04-13.55zM739.18 279c-3.85 3.19-9.48 5-16.87 5H702v-37h20.3c7.4 0 13 1.43 16.87 4.62s5.78 7.79 5.78 13.77-1.95 10.43-5.77 13.61zM812.36 327.68a65.85 65.85 0 0 0 59.66 0 54.27 54.27 0 0 0 0-95.76 65.85 65.85 0 0 0-59.66 0 53 53 0 0 0-20.82 19.68 56.6 56.6 0 0 0 0 56.39 53 53 0 0 0 20.82 19.69zm.91-65.51a31.08 31.08 0 0 1 11.93-12.08 35.62 35.62 0 0 1 34 0 31.09 31.09 0 0 1 11.93 12.08 38 38 0 0 1 0 35.26 31.09 31.09 0 0 1-11.93 12.08 35.62 35.62 0 0 1-34 0 31.08 31.08 0 0 1-11.93-12.08 38 38 0 0 1 .01-35.26zM971.73 334.82a62.57 62.57 0 0 0 25.08-4.86 49.28 49.28 0 0 0 18.85-14.14l-15.81-14.59q-10.79 12.62-26.75 12.62a35.51 35.51 0 0 1-17.63-4.33 30.79 30.79 0 0 1-12.08-12.08 38 38 0 0 1 0-35.26 30.79 30.79 0 0 1 12.08-12.08 35.52 35.52 0 0 1 17.63-4.33q16 0 26.75 12.46l15.81-14.59a50.11 50.11 0 0 0-18.77-14 66 66 0 0 0-54.57 2.2 52.74 52.74 0 0 0-20.67 19.61 57.17 57.17 0 0 0 0 56.7 52.74 52.74 0 0 0 20.67 19.61 61.11 61.11 0 0 0 29.41 7.06zM1059 289h48v44h25V227h-25v42h-48v-42h-25v106h25v-44zM1182 246.21V333h25v-86.79a84.34 84.34 0 0 1 29.27 10.18l8.33-18.39a88.51 88.51 0 0 0-23.65-9.88 105 105 0 0 0-26.53-3.34 103.45 103.45 0 0 0-26.3 3.34 91 91 0 0 0-23.71 9.88l8.23 18.39a85.49 85.49 0 0 1 29.36-10.18zM1277.63 327.68a65.84 65.84 0 0 0 59.66 0 54.27 54.27 0 0 0 0-95.76 65.85 65.85 0 0 0-59.66 0 53 53 0 0 0-20.82 19.68 56.59 56.59 0 0 0 0 56.39 53 53 0 0 0 20.82 19.69zm.91-65.51a31.07 31.07 0 0 1 11.93-12.08 35.62 35.62 0 0 1 34 0 31.09 31.09 0 0 1 11.93 12.08 38 38 0 0 1 0 35.26 31.09 31.09 0 0 1-11.93 12.08 35.62 35.62 0 0 1-34 0 31.07 31.07 0 0 1-11.93-12.08 38 38 0 0 1 0-35.26zM1480 227h-24v32.74c0 9-2.38 15.76-6.84 20.22s-10.56 6.69-18.16 6.69c-7.2 0-12.94-2.13-16.9-6.38s-6.1-10.54-6.1-18.85V227h-24v35.93c0 14.39 3.45 25.41 10.69 33.06s17.67 11.48 31.15 11.48c13 0 23.16-4.36 30.16-13.07v6.54c0 9.42-2.3 16.39-6.61 20.9s-11 6.76-19.91 6.76a52.08 52.08 0 0 1-33.78-11.7l-9.59 18.24a55.49 55.49 0 0 0 19.14 10.56 78.45 78.45 0 0 0 24.77 3.72c15.71 0 27.85-4.28 36.77-12.84s13.21-20.86 13.21-36.87V227zM1523.19 308.76a15.67 15.67 0 0 0-21 0 13.88 13.88 0 0 0-4.26 10.56 14.43 14.43 0 0 0 4.26 10.64 15.05 15.05 0 0 0 21 0 14.44 14.44 0 0 0 4.26-10.64 13.89 13.89 0 0 0-4.26-10.56zM1578.67 250.08a35.52 35.52 0 0 1 17.63-4.33q16 0 26.75 12.46l15.81-14.59a50.11 50.11 0 0 0-18.77-14 66 66 0 0 0-54.57 2.2 52.74 52.74 0 0 0-20.67 19.61 57.16 57.16 0 0 0 0 56.7 52.74 52.74 0 0 0 20.67 19.61 61.11 61.11 0 0 0 29.41 7.07A62.57 62.57 0 0 0 1620 330a49.28 49.28 0 0 0 18.85-14.14l-15.81-14.59q-10.79 12.62-26.75 12.62a35.51 35.51 0 0 1-17.63-4.33 30.79 30.79 0 0 1-12.08-12.08 38 38 0 0 1 0-35.26 30.79 30.79 0 0 1 12.09-12.14zM1764.71 279.8a53.24 53.24 0 0 0-28.42-47.88 65.85 65.85 0 0 0-59.66 0 53 53 0 0 0-20.82 19.68 56.59 56.59 0 0 0 0 56.39 53 53 0 0 0 20.82 19.68 65.84 65.84 0 0 0 59.66 0 53.24 53.24 0 0 0 28.42-47.87zm-29.26 17.63a31.09 31.09 0 0 1-11.93 12.08 35.62 35.62 0 0 1-34 0 31.07 31.07 0 0 1-11.93-12.08 38 38 0 0 1 0-35.26 31.07 31.07 0 0 1 11.93-12.08 35.62 35.62 0 0 1 34 0 31.09 31.09 0 0 1 11.93 12.08 38 38 0 0 1 0 35.26zM1877 333v-63.08c0-8.11 2.32-14.16 6.48-18.16s9.85-6 16.84-6c6.38 0 11.72 1.9 15.63 5.7s6 9.45 6 16.95V333h24v-65.36c0-13.88-3.32-24.5-10.31-31.84s-16.68-11-29.25-11a47.73 47.73 0 0 0-19.94 4 35.22 35.22 0 0 0-14.34 11.63 28.93 28.93 0 0 0-12.61-11.63 43 43 0 0 0-19.15-4 42.14 42.14 0 0 0-18.51 3.88 30.57 30.57 0 0 0-12.89 11V227h-24v106h25v-63.08c0-8.11 1.93-14.16 6.08-18.16s9.6-6 16.49-6c6.28 0 11.27 1.9 14.92 5.7s5.5 9.45 5.5 16.95V333h24z' })
+          )
         ),
         (0, _preact.h)(
           'div',
@@ -5254,13 +5265,13 @@ var _preact = __webpack_require__(0);
 
 var _preactRedux = __webpack_require__(6);
 
-var _store = __webpack_require__(7);
+var _store = __webpack_require__(8);
 
 var _store2 = _interopRequireDefault(_store);
 
 var _reactTransitionGroup = __webpack_require__(27);
 
-var _analytics = __webpack_require__(8);
+var _analytics = __webpack_require__(7);
 
 var Analytics = _interopRequireWildcard(_analytics);
 
@@ -6146,17 +6157,13 @@ var _preact = __webpack_require__(0);
 
 var _preactRedux = __webpack_require__(6);
 
-var _store = __webpack_require__(7);
+var _store = __webpack_require__(8);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _analytics = __webpack_require__(8);
+var _analytics = __webpack_require__(7);
 
 var Analytics = _interopRequireWildcard(_analytics);
-
-var _svg = __webpack_require__(38);
-
-var _svg2 = _interopRequireDefault(_svg);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -6167,6 +6174,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import Svg from '../svg';
 
 var options = [{
   value: 80,
@@ -6181,15 +6190,17 @@ var options = [{
   value: 20,
   label: '20%'
 }, {
+  value: 10,
+  label: '10%'
+}, {
   value: 0,
-  label: 'Ни за что',
-  isActive: true
+  label: 'Неа'
 }];
 
 var Option = function Option(props, state) {
   return (0, _preact.h)(
     'div',
-    { className: 'pochtoy-q__option' + (props.item.value === 0 ? ' pochtoy-q__option--full' : '') },
+    { className: 'pochtoy-options__item' },
     (0, _preact.h)(
       'div',
       { className: 'pochtoy-option' + (props.isActive ? ' is-active' : ''), onClick: function onClick(e) {
@@ -6233,14 +6244,14 @@ var OptionList = function (_Component) {
 
       var getOptions = function getOptions() {
         return props.items.map(function (item, i) {
-          var isActive = state.activeValue !== undefined ? state.activeValue === item.value : props.activeValue === item.value;
+          var isActive = props.activeValue === item.value;
           return (0, _preact.h)(Option, { key: i, item: item, isActive: isActive, onClick: _this2.onClick });
         });
       };
 
       return (0, _preact.h)(
         'div',
-        { className: 'pochtoy-q__options' },
+        { className: 'pochtoy-options' },
         getOptions()
       );
     }
@@ -6256,8 +6267,6 @@ var Question = function (_Component2) {
     _classCallCheck(this, Question);
 
     var _this3 = _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
-
-    _this3.state.answerValue = 0;
 
     _this3.answer = _this3.answer.bind(_this3);
     _this3.next = _this3.next.bind(_this3);
@@ -6278,11 +6287,18 @@ var Question = function (_Component2) {
   }, {
     key: 'next',
     value: function next() {
-      Analytics.sendEvent('Next');
+      if (this.state.answerValue === undefined) {
+        return;
+      }
 
-      this.setState({
-        promoIsClose: false
-      });
+      if (!this.state.showPromo && this.props.test.question.promo) {
+        this.setState({
+          showPromo: true
+        });
+        return;
+      }
+
+      Analytics.sendEvent('Next');
 
       _store2.default.dispatch({
         type: 'TEST_ANSWER',
@@ -6291,6 +6307,11 @@ var Question = function (_Component2) {
 
       _store2.default.dispatch({
         type: 'TEST_NEXT'
+      });
+
+      this.setState({
+        answerValue: undefined,
+        showPromo: false
       });
     }
   }, {
@@ -6314,7 +6335,11 @@ var Question = function (_Component2) {
       var _this4 = this;
 
       var getNotice = function getNotice() {
-        var value = state.answerValue === undefined ? 0 : state.answerValue;
+        if (state.answerValue === undefined) {
+          return null;
+        }
+
+        var value = state.answerValue;
         var results = props.test.results[props.test.activeIndex];
         var total = 0;
         var current = 0;
@@ -6354,19 +6379,23 @@ var Question = function (_Component2) {
       };
 
       var getPromo = function getPromo() {
-        if (!props.test.question.promo || state.promoIsClose) {
+        if (!state.showPromo) {
           return null;
         }
 
         return (0, _preact.h)(
           'div',
           { className: 'pochtoy-q__promo' },
-          (0, _preact.h)('div', { className: 'pochtoy-q__promo-close', onClick: function onClick(e) {
-              return _this4.setState({
-                promoIsClose: true
-              });
-            } }),
-          (0, _preact.h)('div', { className: 'pochtoy-q__promo-text', dangerouslySetInnerHTML: { __html: props.test.question.promo } })
+          (0, _preact.h)(
+            'div',
+            { className: 'pochtoy-q__promo-inner' },
+            (0, _preact.h)('div', { className: 'pochtoy-q__promo-text', dangerouslySetInnerHTML: { __html: props.test.question.promo } }),
+            (0, _preact.h)(
+              'button',
+              { className: 'pochtoy-q__promo-btn', onClick: _this4.next },
+              '\u0414\u0430\u043B\u0435\u0435'
+            )
+          )
         );
       };
 
@@ -6379,8 +6408,18 @@ var Question = function (_Component2) {
           { className: 'pochtoy-q__body' },
           (0, _preact.h)(
             'div',
+            { className: 'pochtoy-q__label' },
+            '\u0427\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C:'
+          ),
+          (0, _preact.h)(
+            'div',
             { className: 'pochtoy-q__title' },
             props.test.question.act
+          ),
+          (0, _preact.h)(
+            'div',
+            { className: 'pochtoy-q__label' },
+            '\u041B\u043E\u0442:'
           ),
           (0, _preact.h)(
             'div',
@@ -6415,17 +6454,26 @@ var Question = function (_Component2) {
               getNotice()
             )
           ),
-          (0, _preact.h)(OptionList, { items: options, activeValue: state.answerValue, onClick: this.answer }),
+          (0, _preact.h)(
+            'div',
+            { className: 'pochtoy-q__label pochtoy-q__label--options' },
+            '\u0420\u0430\u0437\u043C\u0435\u0440 \u0441\u043A\u0438\u0434\u043A\u0438:'
+          ),
+          (0, _preact.h)(
+            'div',
+            { className: 'pochtoy-q__options' },
+            (0, _preact.h)(OptionList, { items: options, activeValue: state.answerValue, onClick: this.answer })
+          ),
           (0, _preact.h)(
             'div',
             { className: 'pochtoy-q__btn' },
             props.test.activeIndex < props.test.questionsCount - 1 ? (0, _preact.h)(
               'button',
-              { className: 'pochtoy-btn', onClick: this.next },
-              '\u0414\u0430\u043B\u0435\u0435'
+              { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: this.next },
+              '$ \u0421\u043E\u0433\u043B\u0430\u0441\u0435\u043D $'
             ) : (0, _preact.h)(
               'button',
-              { className: 'pochtoy-btn', onClick: this.result },
+              { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: this.result },
               '\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442'
             )
           )
@@ -6455,26 +6503,6 @@ exports.default = (0, _preactRedux.connect)(mapStateToProps)(Question);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/**
- * Все svg-иконки рекомендуется хранить здесь,
- * предварительно прогнав их через https://jakearchibald.github.io/svgomg/
- */
-exports.default = {
-  logo: '<svg viewBox="0 0 305.92 50.77"><path fill="#0d4ba0" d="M35.36 19.52v-.05a3.14 3.14 0 0 0 2.29-3.28c0-2.41-2-3.52-4.72-3.52h-4.64v5.77H25.5c-3.7 0-4.46 2.59-4.46 4 0 2 1.16 2.9 3.3 4 1.3.65 2.86 1.05 2.86 2.54 0 .78-.72 1.72-2.28 1.72h-2.9a4.55 4.55 0 0 0 .62-2.27c0-.92-.33-4.62-5.48-4.62h-4.22v14.28h2.87v-6.22l1.16 1.16h7.84c3.66 0 5.4-1.88 5.4-4.13a4.39 4.39 0 0 0-.4-2h2.94c4.54 0 5.59-2.25 5.59-4a3.31 3.31 0 0 0-2.98-3.38zM17.15 30.7H15.8v-4.67h1.34a2.17 2.17 0 0 1 2.43 2.25 2.29 2.29 0 0 1-2.42 2.42zm11.14-8.85v3.46a20.35 20.35 0 0 0-2.36-1.12c-.91-.4-1.89-.91-1.89-2.05 0-.58.36-1.45 2.1-1.45h3.23zm2.87-6.93h1.31c2.21 0 2.32 1.36 2.32 1.78 0 .62-.33 1.76-2.21 1.76h-1.46v-3.54zm1.63 9.76h-1.67v-4h1.63c2 0 2.54 1 2.54 2s-.72 2-2.54 2z"/><path fill="#0d4ba0" d="M50.8 12.36A12.36 12.36 0 0 0 38.44 0H20.97a12.36 12.36 0 0 0-11.9 9h21.11c8.12 0 11.57 3.78 11.57 12.64v20a12.39 12.39 0 0 0 9-11.89V12.36z"/><path fill="#f26522" d="M0 38.41a12.36 12.36 0 0 0 12.36 12.36h17.46a12.36 12.36 0 0 0 11.9-9H20.61c-8.12 0-11.57-3.78-11.57-12.64v-20a12.39 12.39 0 0 0-9 11.89v17.46z"/><path fill="#0d4ba0" d="M269.56 38.05V19.66h5.33v6.83h5.78v-6.83h5.26v18.39h-5.26v-8.2h-5.78v8.2h-5.33zM261.88 35.19v-6.54c-2.24.3-5.54.69-5.54 3.89 0 3.92 4.22 3.2 5.54 2.65zm-10.4-2.35a5.46 5.46 0 0 1 3.84-5.36 19.24 19.24 0 0 1 3.05-.84c.89-.16 2.06-.3 3.48-.5v-.58c.11-2.66-1.42-3.16-3.3-3.16a10.94 10.94 0 0 0-5 1.38l-.35-3.3a19.38 19.38 0 0 1 6.64-1.17 10.76 10.76 0 0 1 3.62.5 4.59 4.59 0 0 1 3.34 4 13 13 0 0 1 .07 1.87v11.45c-4.61 1.78-15.34 3-15.34-4.31zM243.56 34.52a2.49 2.49 0 0 1-2.16 1.06c-3.06 0-3.77-5-3.77-7.26a7.93 7.93 0 0 1 1.46-5.08 2.64 2.64 0 0 1 2.2-1 3 3 0 0 1 2.81 2.2 12.42 12.42 0 0 1 .78 4.69 9.31 9.31 0 0 1-1.32 5.37zm6.39-9.8a7.9 7.9 0 0 0-2.31-3.78c-1.81-1.72-8.2-3.14-11.29 1.47 0-4.86 2.06-7.26 6.18-8s6.39-1.08 6.39-1.08l-.39-3.94s-4.22.59-7.7 1.38a10.61 10.61 0 0 0-8.28 9.14c-.6 3.59-.53 9.78.53 12.68 1.24 3.34 3.73 5.86 8.28 5.86 6.25 0 9.12-3.84 9.12-9.84a16.81 16.81 0 0 0-.53-3.94zM288.98 38.05V19.66h5.26v8.46l5.89-8.46h5.19l-6.01 8.22 6.61 10.17h-5.86l-5.82-9.15v9.15h-5.26zM205.18 38.44a14.45 14.45 0 0 1-5-.73l.43-3.2a7.17 7.17 0 0 0 3.84 1.06c2.66 0 4.12-1.22 4-2.95a2.27 2.27 0 0 0-.82-1.92 3 3 0 0 0-1.85-.72c-.71-.05-1.28-.11-1.78-.11h-1.28v-2.76h.36c2 0 5-.08 5-2.61 0-2-2-2.4-3.05-2.4a9.06 9.06 0 0 0-4.47 1.17l-.28-3a15.7 15.7 0 0 1 5.9-1c4.26-.09 6.92 1.83 6.82 4.72.07 2.37-2 3.75-3.37 4.19a6.34 6.34 0 0 1 2.34.87 4.19 4.19 0 0 1 1.78 3.55 5.18 5.18 0 0 1-3.13 4.86 13.34 13.34 0 0 1-5.47 1zM157.84 38.44c-6.07 0-9.44-3.69-9.44-9.68s3.59-9.55 9.51-9.55a11.58 11.58 0 0 1 4.33.74l-.57 3.34a6.18 6.18 0 0 0-2.91-.78c-3.55 0-5.07 2.9-5.07 6.09s1.49 6.48 5.11 6.48a6 6 0 0 0 2.95-.72l.39 3.39a12.49 12.49 0 0 1-4.29.69zM216.04 38.05V19.66h5.25v5.8h2.09c2.41 0 4.23.39 5.33 1.22a5.64 5.64 0 0 1 2.13 4.67c-.14 6-6.21 7.13-9.52 7.13a27.61 27.61 0 0 1-5.25-.39zm5.22-3s4.76 1 4.76-3.53a3.16 3.16 0 0 0-.46-1.9c-.53-.94-1.74-1.1-3-1.1h-.77a2.55 2.55 0 0 0-.53.06v6.48zM170.13 27.33v-5.06s.53-.05 1.85-.05c2.52 0 3 1.47 3 2.42 0 1.81-1.1 2.7-3.66 2.7h-1.21zm1.31 2.86c.5 0 1 0 1.67.06a2.72 2.72 0 0 1 1.67.64 2.07 2.07 0 0 1 .75 1.81c0 2-1.78 2.75-4.08 2.75h-1.31v-5.26h1.31zm5.22-1.92c2.2-.69 3.3-2.07 3.3-4.17a4.32 4.32 0 0 0-.6-2.33 4.15 4.15 0 0 0-2-1.61 15.63 15.63 0 0 0-6-.94 39.15 39.15 0 0 0-6.32.44v18.39a46.89 46.89 0 0 0 6.32.39c3.69 0 9.3-.92 9.45-5.61v-.2c.11-2-1.17-4-4.12-4.37zM192.29 27.63h-1.31c-2.52 0-3.55-.83-3.55-2.91s1.63-2.59 2.95-2.59a15.12 15.12 0 0 1 1.91.06v5.41zm-1.17-8.44c-3.87 0-8.7.64-8.7 5.61a4.66 4.66 0 0 0 3.83 4.92l-4.96 8.33h5.47l3.94-7.33h1.59v7.33h5.18V19.66a40.5 40.5 0 0 0-6.36-.44zM63.5 38.05V12.68h19.32v25.37h-5.61V16.27h-8.06v21.78H63.5zM97.8 28.19c0-6.89-4.8-6.29-6.57-5.86v12c.71.16 6.57 2.41 6.57-6.14zM85.91 45.45V20.19c4.61-.94 17.11-3.54 17.11 7.67a10.94 10.94 0 0 1-2.31 7.26c-3 3.61-7.88 3.21-9.48 2.58v7.81h-5.32zM113.99 35.55c1.53 0 2.56-1.24 3-2.85a16.48 16.48 0 0 0 .46-4.09 12 12 0 0 0-.71-4.42 3 3 0 0 0-2.74-2.06 3.29 3.29 0 0 0-3.09 2.59 12.23 12.23 0 0 0-.6 3.89c0 2.27.53 6.94 3.69 6.94zm-.39 2.89c-6.07 0-8.7-3.83-8.7-9.59 0-6 3.13-9.64 9.23-9.64a8.55 8.55 0 0 1 5.26 1.49 6.66 6.66 0 0 1 2.59 3.67 14.35 14.35 0 0 1 .68 4.33c0 6.19-2.63 9.73-9.05 9.73zM123.76 38.05l1.92-18.39h6.11l3.8 12.53 3.76-12.53h6.04l1.77 18.39h-4.86l-1.03-13.23-3.98 13.23h-4.23l-4.04-13.34-1.03 13.34h-4.23z"/></svg>',
-  refresh: '<svg width="15" height="15"><path d="M14.62.674c-.268-.11-.495-.065-.684.136l-1.27 1.26A7.58 7.58 0 0 0 10.278.542 7.357 7.357 0 0 0 7.5 0a7.298 7.298 0 0 0-2.91.596 7.565 7.565 0 0 0-2.393 1.601A7.567 7.567 0 0 0 .596 4.59 7.298 7.298 0 0 0 0 7.5c0 1.015.199 1.986.596 2.91a7.567 7.567 0 0 0 1.601 2.393 7.57 7.57 0 0 0 2.393 1.601A7.298 7.298 0 0 0 7.5 15c1.12 0 2.185-.236 3.194-.708a7.333 7.333 0 0 0 2.578-1.997.32.32 0 0 0 .073-.22.27.27 0 0 0-.093-.2l-1.338-1.348a.376.376 0 0 0-.244-.087c-.104.013-.179.052-.224.117a4.904 4.904 0 0 1-1.748 1.436A4.925 4.925 0 0 1 7.5 12.5a4.87 4.87 0 0 1-1.938-.395 5.034 5.034 0 0 1-1.597-1.07A5.038 5.038 0 0 1 2.896 9.44 4.87 4.87 0 0 1 2.5 7.5c0-.677.132-1.323.396-1.938a5.036 5.036 0 0 1 1.07-1.597c.449-.45.98-.806 1.596-1.07A4.87 4.87 0 0 1 7.5 2.5c1.309 0 2.445.446 3.409 1.338L9.56 5.186c-.202.195-.248.42-.137.674.11.26.303.39.576.39h4.375a.6.6 0 0 0 .44-.185.6.6 0 0 0 .185-.44V1.25a.584.584 0 0 0-.38-.576z"/></svg>',
-  border: '<svg width="600" height="7.04" viewBox="0 0 600 7.04"><path fill="#fe5300" d="M582 0H0v4.83l1.06.1C7 4.93 7 7 12.68 7c6 0 6-2.11 12-2.11 5.6.04 5.6 2.11 11.59 2.11s6-2.11 12-2.11c5.6.04 5.6 2.11 11.59 2.11s6-2.11 11.62-2.11c6 0 6 2.11 12 2.11 5.63 0 5.63-2.11 11.62-2.11 5.6.04 5.6 2.11 11.59 2.11s6-2.11 12-2.11C124.3 4.93 124.3 7 130.28 7s6-2.11 12-2.11c5.63 0 5.63 2.11 12 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11s6-2.11 12-2.11c5.63 0 5.63 2.11 12 2.11 5.63 0 5.63-2.11 11.62-2.11C241.9 4.93 241.9 7 247.89 7c5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11s6-2.11 12-2.11c5.63 0 5.63 2.11 12 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11C324 7 324 4.89 329.99 4.89c5.63 0 5.63 2.11 11.62 2.11s6-2.11 13-2.11c5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 12.32-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11C512 7 512 4.93 518 4.93c5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 12.32-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11 5.63 0 5.63 2.11 11.62 2.11 5.63 0 5.63-2.11 11.62-2.11C594 4.93 594 7 600 7V0h-18z"/></svg>'
-};
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -6482,13 +6510,21 @@ var _preact = __webpack_require__(0);
 
 var _preactRedux = __webpack_require__(6);
 
-var _store = __webpack_require__(7);
+var _store = __webpack_require__(8);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _share = __webpack_require__(40);
+var _analytics = __webpack_require__(7);
+
+var Analytics = _interopRequireWildcard(_analytics);
+
+var _share = __webpack_require__(39);
 
 var Share = _interopRequireWildcard(_share);
+
+var _svg = __webpack_require__(59);
+
+var _svg2 = _interopRequireDefault(_svg);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -6500,7 +6536,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 // import { Transition } from 'react-transition-group';
-// import * as Analytics from '../lib/analytics';
 
 
 var Result = function (_Component) {
@@ -6509,7 +6544,10 @@ var Result = function (_Component) {
   function Result() {
     _classCallCheck(this, Result);
 
-    return _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this));
+    var _this = _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this));
+
+    _this.restart = _this.restart.bind(_this);
+    return _this;
   }
 
   _createClass(Result, [{
@@ -6525,6 +6563,15 @@ var Result = function (_Component) {
         url: this.props.test.params.share.url + '/amoral/' + 32,
         title: this.props.test.params.share.title,
         twitter: this.props.test.params.share.title
+      });
+    }
+  }, {
+    key: 'restart',
+    value: function restart() {
+      Analytics.sendEvent('Restart');
+
+      _store2.default.dispatch({
+        type: 'TEST_RESTART'
       });
     }
   }, {
@@ -6578,6 +6625,16 @@ var Result = function (_Component) {
             (0, _preact.h)('div', { className: 'pochtoy-result__share pochtoy-result__share--dark', ref: function ref(el) {
                 return _this2.shareMoral = el;
               } }),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-result__restart', onClick: this.restart },
+              (0, _preact.h)(
+                'span',
+                null,
+                '\u041F\u0440\u043E\u0439\u0442\u0438 \u0435\u0449\u0435 \u0440\u0430\u0437'
+              ),
+              (0, _preact.h)('span', { dangerouslySetInnerHTML: { __html: _svg2.default.refresh } })
+            ),
             (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/f0862130-b772-cf33-cf69-7e4dbc2a8465/', alt: '', className: 'pochtoy-result__img' })
           ),
           (0, _preact.h)(
@@ -6595,6 +6652,16 @@ var Result = function (_Component) {
             (0, _preact.h)('div', { className: 'pochtoy-result__share', ref: function ref(el) {
                 return _this2.shareAmoral = el;
               } }),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-result__restart pochtoy-result__restart--a', onClick: this.restart },
+              (0, _preact.h)(
+                'span',
+                null,
+                '\u041F\u0440\u043E\u0439\u0442\u0438 \u0435\u0449\u0435 \u0440\u0430\u0437'
+              ),
+              (0, _preact.h)('span', { dangerouslySetInnerHTML: { __html: _svg2.default.refresh } })
+            ),
             (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/230588fc-b0b6-6d8a-fafa-1d86a6977980/', alt: '', className: 'pochtoy-result__img pochtoy-result__img--a' })
           )
         ),
@@ -6643,7 +6710,7 @@ var mapStateToProps = function mapStateToProps(store) {
 exports.default = (0, _preactRedux.connect)(mapStateToProps)(Result);
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6654,13 +6721,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.make = exports.init = undefined;
 
-var _cmttLikely = __webpack_require__(41);
+var _cmttLikely = __webpack_require__(40);
 
 var _cmttLikely2 = _interopRequireDefault(_cmttLikely);
 
-var _dom = __webpack_require__(59);
+var _dom = __webpack_require__(58);
 
-var _analytics = __webpack_require__(8);
+var _analytics = __webpack_require__(7);
 
 var Analytics = _interopRequireWildcard(_analytics);
 
@@ -6710,12 +6777,12 @@ var make = exports.make = function make(parentContainer) {
 };
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 'use strict';
 
-var Likely = __webpack_require__(42),
+var Likely = __webpack_require__(41),
     config = __webpack_require__(1),
     utils = __webpack_require__(4),
     dom = __webpack_require__(3);
@@ -6766,10 +6833,10 @@ likely.defaults = {
 module.exports = likely;
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Button = __webpack_require__(43);
+var Button = __webpack_require__(42);
 
 var services = __webpack_require__(9),
     config   = __webpack_require__(1),
@@ -6918,12 +6985,12 @@ Likely.prototype = {
 module.exports = Likely;
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var services = __webpack_require__(9),
     config = __webpack_require__(1),
-    fetch = __webpack_require__(57),
+    fetch = __webpack_require__(56),
     utils = __webpack_require__(4),
     dom = __webpack_require__(3),
     storage = __webpack_require__(17);
@@ -7191,7 +7258,7 @@ LikelyButton.prototype = {
 module.exports = LikelyButton;
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dom = __webpack_require__(3);
@@ -7224,13 +7291,13 @@ module.exports = function (options) {
 };
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module) {
 
 module.exports = {"facebook":"5.9 16h3.3V8h2.2l.3-2.8H9.2V3.8c0-.7.1-1.1 1.1-1.1h1.4V0H9.5C6.9 0 5.9 1.3 5.9 3.6v1.7H4.3V8H6v8","twitter":"15.96 3.42c-.04.153-.144.31-.237.414l-.118.058v.118l-.59.532-.237.295c-.05.036-.398.21-.413.237V6.49h-.06v.473h-.058v.294h-.058v.296h-.06v.235h-.06v.237h-.058c-.1.355-.197.71-.295 1.064h-.06v.116h-.06c-.02.1-.04.197-.058.296h-.06c-.04.118-.08.237-.118.355h-.06c-.038.118-.078.236-.117.353l-.118.06-.06.235-.117.06v.116l-.118.06v.12h-.06c-.02.057-.038.117-.058.175l-.118.06v.117c-.06.04-.118.08-.177.118v.118l-.237.177v.118l-.59.53-.532.592h-.117c-.06.078-.118.156-.177.236l-.177.06-.06.117h-.118l-.06.118-.176.06v.058h-.118l-.06.118-.353.12-.06.117c-.078.02-.156.04-.235.058v.06c-.118.038-.236.078-.354.118v.058H8.76v.06h-.12v.06h-.176v.058h-.118v.06H8.17v.058H7.99v.06l-.413.058v.06h-.237c-.667.22-1.455.293-2.36.293h-.886v-.058h-.53v-.06H3.27v-.06h-.295v-.06H2.68v-.057h-.177v-.06h-.236v-.058H2.09v-.06h-.177v-.058h-.177v-.06H1.56v-.058h-.12v-.06l-.294-.06v-.057c-.118-.04-.236-.08-.355-.118v-.06H.674v-.058H.555v-.06H.437v-.058H.32l-.06-.12H.142v-.058c-.13-.08-.083.026-.177-.118H1.56v-.06c.294-.04.59-.077.884-.117v-.06h.177v-.058h.237v-.06h.118v-.06h.177v-.057h.118v-.06h.177v-.058l.236-.06v-.058l.236-.06c.02-.038.04-.078.058-.117l.237-.06c.02-.04.04-.077.058-.117h.118l.06-.118h.118c.036-.025.047-.078.118-.118V12.1c-1.02-.08-1.84-.54-2.303-1.183-.08-.058-.157-.118-.236-.176v-.117l-.118-.06v-.117c-.115-.202-.268-.355-.296-.65.453.004.987.008 1.354-.06v-.06c-.254-.008-.47-.08-.65-.175v-.058H2.32v-.06c-.08-.02-.157-.04-.236-.058l-.06-.118h-.117l-.118-.178h-.12c-.077-.098-.156-.196-.235-.294l-.118-.06v-.117l-.177-.12c-.35-.502-.6-1.15-.59-2.006h.06c.204.234.948.377 1.357.415v-.06c-.257-.118-.676-.54-.827-.768V5.9l-.118-.06c-.04-.117-.08-.236-.118-.354h-.06v-.118H.787c-.04-.196-.08-.394-.118-.59-.06-.19-.206-.697-.118-1.005h.06V3.36h.058v-.177h.06v-.177h.057V2.83h.06c.04-.118.078-.236.117-.355h.118v.06c.12.097.237.196.355.295v.118l.118.058c.08.098.157.197.236.295l.176.06.354.413h.118l.177.236h.118l.06.117h.117c.04.06.08.118.118.177h.118l.06.118.235.06.06.117.356.12.06.117.53.176v.06h.118v.058l.236.06v.06c.118.02.236.04.355.058v.06h.177v.058h.177v.06h.176v.058h.236v.06l.472.057v.06l1.417.18v-.237c-.1-.112-.058-.442-.057-.65 0-.573.15-.99.354-1.358v-.117l.118-.06.06-.235.176-.118v-.118c.14-.118.276-.236.414-.355l.06-.117h.117l.12-.177.235-.06.06-.117h.117v-.058H9.7v-.058h.177v-.06h.177v-.058h.177v-.06h.296v-.058h1.063v.058h.294v.06h.177v.058h.178v.06h.177v.058h.118v.06h.118l.06.117c.08.018.158.038.236.058.04.06.08.118.118.177h.118l.06.117c.142.133.193.163.472.178.136-.12.283-.05.472-.118v-.06h.177v-.058h.177v-.06l.236-.058v-.06h.177l.59-.352v.176h-.058l-.06.295h-.058v.117h-.06v.118l-.117.06v.118l-.177.118v.117l-.118.06-.354.412h-.117l-.177.236h.06c.13-.112.402-.053.59-.117l1.063-.353","vkontakte":"15.4 12.8h-1.8c-.7 0-.9-.5-2.1-1.7-1-1-1.5-1.1-1.7-1.1-.4 0-.5.1-.5.6v1.6c0 .4-.1.7-1.3.7-1.9 0-3.9-1.1-5.3-3.2C.6 6.5 0 4.2 0 3.7c0-.3.1-.5.6-.5h1.8c.4 0 .6.2.8.7C4 6.4 5.4 8.6 6 8.6c.2 0 .3-.1.3-.7V5.4c0-1.2-.6-1.3-.6-1.7 0-.2.2-.4.4-.4h2.8c.4 0 .5.2.5.6v3.5c0 .4.2.5.3.5.2 0 .4-.1.8-.5 1.3-1.4 2.2-3.6 2.2-3.6.1-.3.3-.5.8-.5h1.8c.5 0 .6.3.5.6-.2 1-2.4 4-2.4 4-.2.3-.3.4 0 .8.2.3.8.8 1.2 1.3.8.8 1.3 1.6 1.5 2.1 0 .4-.2.7-.7.7","gplus":"8,6.5v3h4.291c-0.526,2.01-2.093,3.476-4.315,3.476C5.228,12.976,3,10.748,3,8c0-2.748,2.228-4.976,4.976-4.976c1.442,0,2.606,0.623,3.397,1.603L13.52,2.48C12.192,0.955,10.276,0,8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s7.5-3.582,7.5-8V6.5H8","odnoklassniki":"8 2.6c.9 0 1.7.7 1.7 1.7C9.7 5.2 9 6 8 6c-.9 0-1.7-.7-1.7-1.7S7.1 2.6 8 2.6zm0 5.7c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm1.6 3.2c.8-.2 1.6-.5 2.3-1 .5-.3.7-1.1.4-1.6-.3-.6-1.1-.7-1.6-.4-1.6 1-3.8 1-5.4 0-.6-.3-1.3-.1-1.6.4-.4.6-.2 1.3.3 1.7.7.5 1.5.8 2.3 1l-2.2 2.2c-.5.5-.5 1.2 0 1.7.2.2.5.3.8.3.3 0 .6-.1.8-.3L8 13.2l2.2 2.2c.5.5 1.2.5 1.7 0s.5-1.2 0-1.7l-2.3-2.2","pocket":"12.533 6.864L8.77 10.4c-.213.2-.486.3-.76.3-.273 0-.547-.1-.76-.3L3.488 6.865c-.437-.41-.45-1.09-.032-1.52.42-.428 1.114-.443 1.55-.032l3.006 2.823 3.004-2.823c.438-.41 1.132-.396 1.55.032.42.43.406 1.11-.03 1.52zm3.388-4.928c-.207-.56-.755-.936-1.363-.936H1.45C.854 1 .31 1.368.096 1.917.032 2.08 0 2.25 0 2.422v4.73l.055.94c.232 2.14 1.366 4.01 3.12 5.314.03.024.063.047.094.07l.02.013c.94.673 1.992 1.13 3.128 1.353.524.104 1.06.157 1.592.157.492 0 .986-.045 1.472-.133.058-.01.116-.022.175-.034.016-.003.033-.01.05-.018 1.088-.233 2.098-.677 3.003-1.326l.02-.015c.032-.022.064-.045.096-.07 1.753-1.303 2.887-3.173 3.12-5.312l.054-.94v-4.73c0-.165-.02-.327-.08-.487","telegram":"12.4 4.2L6.6 9.6c-.2.2-.3.4-.4.7L6 11.8c0 .2-.3.2-.3 0l-.8-2.6c-.1-.4.1-.7.3-.8l7-4.3c.2-.2.4 0 .2.1zm2.9-3L.5 6.9c-.4.1-.4.7 0 .8L4.1 9l1.4 4.5c.1.3.4.4.7.2l2-1.6c.2-.2.5-.2.7 0l3.6 2.6c.3.2.6 0 .7-.3l2.6-12.8c.1-.2-.2-.5-.5-.4","whatsapp":"15.8 7.8c0 4.2-3.4 7.6-7.6 7.6-1.3 0-2.6-.3-3.7-.9L.3 15.8l1.4-4.1C1 10.6.6 9.2.6 7.8.6 3.6 4 .2 8.2.2c4.2 0 7.6 3.4 7.6 7.6M8.1 1.4c-3.5 0-6.4 2.9-6.4 6.4 0 1.4.5 2.7 1.2 3.7l-.8 2.4 2.5-.8c1 .7 2.2 1.1 3.5 1.1 3.5 0 6.4-2.9 6.4-6.4.1-3.5-2.8-6.4-6.4-6.4M12 9.5c0-.1-.2-.1-.4-.2s-1.1-.5-1.3-.6c-.2-.1-.3-.1-.4.1-.1.2-.4.6-.6.7-.1.1-.2.1-.4 0-.1 0-.8-.2-1.5-.8-.6-.5-.9-1.1-1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.2 0-.3-.1-.4 0-.1-.4-1-.6-1.4-.1-.3-.3-.2-.4-.2h-.4c-.1 0-.3 0-.5.2-.1.2-.6.6-.6 1.5s.7 1.8.8 1.9c.1.1 1.3 2.1 3.2 2.8 1.9.7 1.9.5 2.2.5.3 0 1.1-.4 1.3-.9.1-.4.1-.8.1-.9","viber":"13.7 6.7c0 .3.1.7-.3.8-.6.1-.5-.4-.5-.8-.4-2.3-1.2-3.2-3.5-3.7-.4-.1-.9 0-.8-.5.1-.5.5-.4.9-.3 2.3.3 4.2 2.3 4.2 4.5zM8.8 1.2c3.7.6 5.5 2.4 5.9 6.1 0 .3-.1.9.4.9s.4-.5.4-.9c0-3.6-3.1-6.8-6.7-7-.2.1-.8-.1-.8.5 0 .4.4.3.8.4zm5.7 10.2c-.5-.4-1-.7-1.5-1.1-1-.7-1.9-.7-2.6.4-.4.6-1 .6-1.6.4-1.7-.8-2.9-1.9-3.7-3.6-.3-.7-.3-1.4.5-1.9.4-.3.8-.6.8-1.2 0-.8-2-3.5-2.7-3.7-.3-.1-.6-.1-1 0C.9 1.2.2 2.7.9 4.4c2.1 5.2 5.8 8.8 11 11 .3.1.6.2.8.2 1.2 0 2.5-1.1 2.9-2.2.3-1-.5-1.5-1.1-2zM9.7 4c-.2 0-.5 0-.6.3-.1.4.2.5.5.5.9.2 1.4.7 1.5 1.7 0 .3.2.5.4.4.3 0 .4-.3.4-.6 0-1.1-1.2-2.3-2.2-2.3","email":"12.7 1c1 .5 1.8 1.2 2.3 2.2.5.9.8 1.9.8 3.1 0 .9-.1 1.8-.5 2.7-.3.9-.8 1.6-1.4 2.2-.6.6-1.4.9-2.3.9-.6 0-1.1-.2-1.5-.5-.4-.3-.6-.7-.7-1.2-.6 1.1-1.5 1.6-2.5 1.6-.8 0-1.5-.3-1.9-.8-.5-.6-.7-1.3-.7-2.2 0-.8.1-1.6.4-2.5S5.5 5 6.1 4.4c.7-.6 1.5-.8 2.6-.8.5 0 1 .1 1.4.2.5.1.9.3 1.3.6l-.7 4.9v.3c0 .2 0 .4.1.5.1.1.3.2.5.2.4 0 .8-.2 1.1-.7.3-.4.5-1 .7-1.6.1-.7.2-1.3.2-1.9 0-1.3-.4-2.3-1.1-3-.8-.7-1.9-1-3.4-1s-2.7.4-3.7 1.1c-.9.7-1.6 1.6-2 2.6S2.6 7.9 2.6 9c0 .9.2 1.8.6 2.5.4.7 1 1.3 1.7 1.7.7.4 1.7.6 2.7.6.5 0 1-.1 1.6-.2.6-.1 1.1-.3 1.5-.4l.4 1.9c-.6.2-1.2.4-1.8.5-.7.1-1.3.2-1.9.2-1.4 0-2.7-.3-3.8-.9s-1.9-1.4-2.5-2.4S.2 10.3.2 9c0-1.3.3-2.7 1-4 .6-1.4 1.6-2.5 3-3.4C5.5.7 7.2.2 9.2.2c1.3 0 2.5.3 3.5.8zm-4 8.4l.6-3.9c-.3-.1-.5-.2-.7-.2-.7 0-1.2.4-1.5 1.2-.3.8-.5 1.7-.5 2.6 0 .8.3 1.2.8 1.2s.9-.3 1.3-.9","more":"14.725 6.667H9.333V1.275C9.333.57 8.738 0 8 0S6.667.57 6.667 1.275v5.392H1.275C.57 6.667 0 7.262 0 8s.57 1.334 1.275 1.334h5.392v5.393C6.667 15.43 7.262 16 8 16s1.333-.57 1.333-1.273V9.334h5.392C15.43 9.334 16 8.738 16 8s-.57-1.333-1.275-1.333"};
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7265,7 +7332,7 @@ utils.set(window, 'ODKL.updateCount', function (index, counter) {
 module.exports = odnoklassniki;
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7299,7 +7366,7 @@ module.exports = vkontakte;
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports) {
 
 /**
@@ -7317,7 +7384,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7343,7 +7410,7 @@ module.exports = twitter;
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7365,7 +7432,7 @@ var gplus = {
 module.exports = gplus;
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7383,7 +7450,7 @@ var pocket = {
 module.exports = pocket;
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports) {
 
 /**
@@ -7397,7 +7464,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports) {
 
 /**
@@ -7411,7 +7478,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports) {
 
 /**
@@ -7425,7 +7492,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7443,7 +7510,7 @@ var email = {
 module.exports = email;
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var config = __webpack_require__(1);
@@ -7454,11 +7521,11 @@ module.exports = {
 };
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var services = __webpack_require__(9),
-    Factory  = __webpack_require__(58),
+    Factory  = __webpack_require__(57),
     utils    = __webpack_require__(4),
     dom      = __webpack_require__(3);
 
@@ -7498,7 +7565,7 @@ module.exports = function (service, url, options) {
 };
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports) {
 
 /**
@@ -7538,7 +7605,7 @@ module.exports = function (value) {
 };
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7667,6 +7734,24 @@ var prepend = exports.prepend = function prepend(parent, el) {
 /** Quick check if element is in DOM */
 var isElementInDom = exports.isElementInDom = function isElementInDom(el) {
     return el.parentNode;
+};
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Все svg-иконки рекомендуется хранить здесь,
+ * предварительно прогнав их через https://jakearchibald.github.io/svgomg/
+ */
+exports.default = {
+  refresh: '<svg width="15" height="15"><path d="M14.62.674c-.268-.11-.495-.065-.684.136l-1.27 1.26A7.58 7.58 0 0 0 10.278.542 7.357 7.357 0 0 0 7.5 0a7.298 7.298 0 0 0-2.91.596 7.565 7.565 0 0 0-2.393 1.601A7.567 7.567 0 0 0 .596 4.59 7.298 7.298 0 0 0 0 7.5c0 1.015.199 1.986.596 2.91a7.567 7.567 0 0 0 1.601 2.393 7.57 7.57 0 0 0 2.393 1.601A7.298 7.298 0 0 0 7.5 15c1.12 0 2.185-.236 3.194-.708a7.333 7.333 0 0 0 2.578-1.997.32.32 0 0 0 .073-.22.27.27 0 0 0-.093-.2l-1.338-1.348a.376.376 0 0 0-.244-.087c-.104.013-.179.052-.224.117a4.904 4.904 0 0 1-1.748 1.436A4.925 4.925 0 0 1 7.5 12.5a4.87 4.87 0 0 1-1.938-.395 5.034 5.034 0 0 1-1.597-1.07A5.038 5.038 0 0 1 2.896 9.44 4.87 4.87 0 0 1 2.5 7.5c0-.677.132-1.323.396-1.938a5.036 5.036 0 0 1 1.07-1.597c.449-.45.98-.806 1.596-1.07A4.87 4.87 0 0 1 7.5 2.5c1.309 0 2.445.446 3.409 1.338L9.56 5.186c-.202.195-.248.42-.137.674.11.26.303.39.576.39h4.375a.6.6 0 0 0 .44-.185.6.6 0 0 0 .185-.44V1.25a.584.584 0 0 0-.38-.576z"/></svg>'
 };
 
 /***/ })
