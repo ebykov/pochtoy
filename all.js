@@ -6263,7 +6263,7 @@ var transitionClawRStyles = {
 var transitionLotStyles = {
   entered: {
     transition: 'transform 1s linear',
-    transform: 'translateY(-500px)'
+    transform: 'translate3d(0, -500px, 0)'
   }
 };
 
@@ -6376,11 +6376,11 @@ var Question = function (_Component) {
         transitionCraneStyles = {
           entering: {
             transition: 'transform 200ms linear',
-            transform: 'translateY(' + offsetY + 'px)'
+            transform: 'translate3d(0, ' + offsetY + 'px, 0)'
           },
           entered: {
             transition: 'transform 1s 200ms linear',
-            transform: 'translateY(' + (-500 + offsetY) + 'px)'
+            transform: 'translate3d(0, ' + (-500 + offsetY) + 'px, 0)'
           }
         };
         this.setState({
