@@ -6261,14 +6261,14 @@ var transitionCraneStyles = {};
 var transitionClawLStyles = {
   entered: {
     transition: 'transform 100ms linear',
-    transform: 'rotate(-30deg)'
+    transform: 'rotate(-30deg) translate3d(0,0,0)'
   }
 };
 
 var transitionClawRStyles = {
   entered: {
     transition: 'transform 100ms linear',
-    transform: 'rotate(22deg)'
+    transform: 'rotate(22deg) translate3d(0,0,0)'
   }
 };
 
