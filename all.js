@@ -6248,7 +6248,7 @@ var options = [{
   label: '10%'
 }, {
   value: 0,
-  label: 'Ни за что'
+  label: 'Нет'
 }];
 
 function getOffsetY(el) {
@@ -6313,19 +6313,20 @@ var Question = function (_Component) {
     value: function componentDidMount() {
       if (window.innerWidth < 640) {
         var containerOffsetY = getOffsetY(this.props.test.params.container);
-        var craneOffsetY = getOffsetY(this.crane);
-        this.craneOffsetY = craneOffsetY + this.crane.offsetHeight - containerOffsetY;
+        var lotWrapOffsetY = getOffsetY(this.lotWrap);
+        this.craneOffsetY = lotWrapOffsetY + this.crane.offsetHeight - containerOffsetY;
         craneDefaultStyles.transform = 'translate3d(0, ' + -this.craneOffsetY + 'px, 0)';
       } else {
         this.craneOffsetY = this.crane.offsetHeight;
         craneDefaultStyles.transform = 'translate3d(0, ' + -this.craneOffsetY + 'px, 0)';
       }
+
+      console.log(this.craneOffsetY);
     }
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps, prevState, snapshot) {
       if (this.promo) {
-        console.log(getOffsetY(this.promo));
         window.scroll({
           top: getOffsetY(this.promo) + this.promo.offsetHeight / 2 - window.innerHeight / 2,
           behavior: 'smooth'
@@ -6364,8 +6365,6 @@ var Question = function (_Component) {
         var lotOffsetY = getOffsetY(this.lot);
         var betweenY = lotOffsetY - (craneOffsetY + this.crane.offsetHeight + this.craneOffsetY);
         var offsetY = lotOffsetY + this.lot.offsetHeight;
-
-        console.log(craneOffsetY, lotOffsetY, offsetY, betweenY);
 
         transitionCraneStyles = {
           entering: {
@@ -6546,7 +6545,9 @@ var Question = function (_Component) {
               { className: 'pochtoy-q__lot' },
               (0, _preact.h)(
                 'div',
-                { className: 'pochtoy-lot' },
+                { className: 'pochtoy-lot', ref: function ref(el) {
+                    return _this2.lotWrap = el;
+                  } },
                 (0, _preact.h)(
                   'div',
                   { className: 'pochtoy-lot__body' },

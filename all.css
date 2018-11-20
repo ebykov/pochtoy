@@ -674,7 +674,7 @@
 }
 .pochtoy-result__block {
   position: relative;
-  padding: 50px 10px 10px;
+  padding: 50px 20px 10px;
   background-color: #fff;
   overflow: hidden;
 }
@@ -684,7 +684,7 @@
   }
 }
 .pochtoy-result__block--a {
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #000;
 }
 @media (min-width: 680px) {
@@ -697,18 +697,32 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 41%;
+  max-width: 169px;
 }
 .pochtoy-result__img--a {
   top: 0;
   bottom: auto;
+  width: 31%;
+  max-width: 150px;
 }
 .pochtoy-result__title {
   position: relative;
   z-index: 1;
   font-family: Montserrat, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.5em;
+}
+@media (min-width: 375px) {
+  .pochtoy-result__title {
+    font-size: 22px;
+  }
+}
+@media (min-width: 480px) {
+  .pochtoy-result__title {
+    font-size: 24px;
+  }
 }
 @media (min-width: 680px) {
   .pochtoy-result__title {
@@ -883,7 +897,7 @@
   display: none;
   line-height: 1;
 }
-@media (min-width: 680px) {
+@media (min-width: 480px) {
   .pochtoy .likely__button {
     display: block;
   }
