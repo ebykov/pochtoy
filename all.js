@@ -5441,94 +5441,44 @@ exports.default = {
   questions: [{
     act: 'Влезть в начало очереди из 15 агрессивных людей',
     lot: 'Китайский флагманский смартфон за 23 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/8322740a-20a5-d4dc-d2c4-e127939e9de9/',
-      style: {
-        left: '55px',
-        width: '105px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/8322740a-20a5-d4dc-d2c4-e127939e9de9/',
     price: 23000
   }, {
     act: 'Просидеть ночь у магазина при температуре -11 градусов',
     lot: 'Новые «умные» часы за 29 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/051a67c7-0fd7-77a8-1e28-2a18d828ddd6/',
-      style: {
-        left: '68px',
-        width: '80px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/051a67c7-0fd7-77a8-1e28-2a18d828ddd6/',
     price: 29000,
     promo: '<p>Одна пара <a href="https://www.reddit.com/r/AskReddit/comments/1re0rl/retail_employees_of_reddit_what_are_your_black/cdmfyn7/" target="_blank">простояла</a> в очереди у магазина Target 14 часов. Попав внутрь, они прошли мимо полок с техникой и набили корзину бумажными полотенцами по $2 за упаковку.</p><p>С Pochtoy.com стоять в очередях не нужно. Товары со скидкой — в том числе часы — можно <a href="https://www.pochtoy.com/shops/watches-and-jewelry/" target="_blank">заказать</a> из США.</p>'
   }, {
     act: 'Отобрать последнюю игровую консоль у ребёнка в очереди',
     lot: 'Игровая консоль последнего поколения за 39 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/28ac8c03-742a-2880-abe2-ab28001ac534/',
-      style: {
-        left: '60px',
-        bottom: '64px',
-        width: '90px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/28ac8c03-742a-2880-abe2-ab28001ac534/',
     price: 39000
   }, {
     act: 'Притвориться инвалидом',
     lot: 'Ультраширокий 4К-монитор за 48 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/84be7672-fbec-36fa-b7c1-87bd4f2933ca/',
-      style: {
-        left: '6px',
-        width: '206px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/84be7672-fbec-36fa-b7c1-87bd4f2933ca/',
     price: 48000
   }, {
     act: 'Натравить агрессивную толпу на продавца-консультанта, чтобы отвлечь внимание',
     lot: 'Флагманский планшет со стилусом за 86 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/4cf9e8d4-ef44-77c7-f102-a99528eb68b1/',
-      style: {
-        left: '22px',
-        width: '172px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/4cf9e8d4-ef44-77c7-f102-a99528eb68b1/',
     price: 86000,
     promo: '<p>В 2005 году отчаявшиеся сотрудники Walmart во Флориде стали <a href="https://www.brainjet.com/random/2355420/15-worst-black-friday-incidents/" target="_blank">кидать</a> ноутбуки в толпу покупателей, а те в ответ устроили потасовку с охраной.</p><p>С Pochtoy всё проще — технику можно со скидкой <a href="https://www.pochtoy.com/shops/electronics/" target="_blank">заказать</a> в крупных американских магазинах вроде легендарного Radioshack или Newegg.</p>'
   }, {
     act: 'Пофлиртовать с усатым охранником склада',
     lot: 'Игровой ноутбук за 98 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/e3662945-e391-fe65-c19d-4de1540422f2/',
-      style: {
-        left: '18px',
-        width: '177px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/e3662945-e391-fe65-c19d-4de1540422f2/',
     price: 98000
   }, {
     act: 'Набить татуировку с логотипом бренда телевизоров',
     lot: 'Безрамочный 4К-телевизор за 170 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/a9652e16-3354-0cdc-e09f-0ee1a7054459/',
-      style: {
-        left: '6px',
-        width: '206px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/a9652e16-3354-0cdc-e09f-0ee1a7054459/',
     price: 170000
   }, {
     act: 'Назвать первенца Аквариусом в честь модели нового автомобиля',
     lot: 'Серый универсал за 651 000 рублей',
-    img: {
-      src: 'https://leonardo.osnova.io/40179d16-1c06-3056-1d06-f76d2dea9edd/',
-      style: {
-        left: '22px',
-        bottom: '56px',
-        width: '162px'
-      }
-    },
+    img: 'https://leonardo.osnova.io/40179d16-1c06-3056-1d06-f76d2dea9edd/',
     price: 651000
   }],
   result: {
@@ -6256,6 +6206,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 _smoothscrollPolyfill2.default.polyfill();
 
+var craneDefaultStyles = {};
+
 var transitionCraneStyles = {};
 
 var transitionClawLStyles = {
@@ -6299,6 +6251,12 @@ var options = [{
   label: 'Ни за что'
 }];
 
+function getOffsetY(el) {
+  var rect = el.getBoundingClientRect();
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return rect.top + scrollTop;
+}
+
 var Option = function Option(props, state) {
   return (0, _preact.h)(
     'div',
@@ -6341,6 +6299,8 @@ var Question = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
 
+    _this.craneOffsetY = 0;
+
     _this.setValue = _this.setValue.bind(_this);
     _this.continue = _this.continue.bind(_this);
     _this.next = _this.next.bind(_this);
@@ -6349,8 +6309,29 @@ var Question = function (_Component) {
   }
 
   _createClass(Question, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (window.innerWidth < 640) {
+        var containerOffsetY = getOffsetY(this.props.test.params.container);
+        var craneOffsetY = getOffsetY(this.crane);
+        this.craneOffsetY = craneOffsetY + this.crane.offsetHeight - containerOffsetY;
+        craneDefaultStyles.transform = 'translate3d(0, ' + -this.craneOffsetY + 'px, 0)';
+      } else {
+        this.craneOffsetY = this.crane.offsetHeight;
+        craneDefaultStyles.transform = 'translate3d(0, ' + -this.craneOffsetY + 'px, 0)';
+      }
+    }
+  }, {
     key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps, prevState, snapshot) {}
+    value: function componentDidUpdate(prevProps, prevState, snapshot) {
+      if (this.promo) {
+        console.log(getOffsetY(this.promo));
+        window.scroll({
+          top: getOffsetY(this.promo) + this.promo.offsetHeight / 2 - window.innerHeight / 2,
+          behavior: 'smooth'
+        });
+      }
+    }
   }, {
     key: 'setValue',
     value: function setValue(e, value) {
@@ -6373,28 +6354,31 @@ var Question = function (_Component) {
 
       Analytics.sendEvent('Continue');
 
-      window.scroll({
-        top: this.props.test.params.container.offsetTop,
-        behavior: 'smooth'
-      });
-
       if (this.state.answerValue && !this.state.grabbing) {
-        var craneRect = this.crane.getBoundingClientRect();
-        var lotRect = this.lot.getBoundingClientRect();
-        var offsetY = lotRect.y - craneRect.y - craneRect.height;
+        window.scroll({
+          top: this.props.test.params.container.offsetTop,
+          behavior: 'smooth'
+        });
 
-        console.log(offsetY);
+        var craneOffsetY = getOffsetY(this.crane);
+        var lotOffsetY = getOffsetY(this.lot);
+        var betweenY = lotOffsetY - (craneOffsetY + this.crane.offsetHeight + this.craneOffsetY);
+        var offsetY = lotOffsetY + this.lot.offsetHeight;
+
+        console.log(craneOffsetY, lotOffsetY, offsetY, betweenY);
 
         transitionCraneStyles = {
           entering: {
             transition: 'transform 200ms linear',
-            transform: 'translate3d(0, ' + offsetY + 'px, 0)'
+            transform: 'translate3d(0, ' + betweenY + 'px, 0)'
           },
           entered: {
             transition: 'transform 1s 200ms linear',
-            transform: 'translate3d(0, ' + (-500 + offsetY) + 'px, 0)'
+            transform: 'translate3d(0, ' + (-offsetY + betweenY) + 'px, 0)'
           }
         };
+
+        transitionLotStyles.entered.transform = 'translate3d(0, ' + -offsetY + 'px, 0)';
         this.setState({
           grabbing: true
         });
@@ -6408,6 +6392,11 @@ var Question = function (_Component) {
         return;
       } else {
         this.answered = false;
+
+        window.scroll({
+          top: this.props.test.params.container.offsetTop,
+          behavior: 'smooth'
+        });
       }
 
       _store2.default.dispatch({
@@ -6470,7 +6459,7 @@ var Question = function (_Component) {
           }
         }
 
-        return Math.round(current / total * 100) + '% пользователей выбрали такую же скидку';
+        return Math.round(current / total * 100) + '% \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439 ' + (state.answerValue ? 'выбрали такую же скидку' : 'решили так же');
       };
 
       var getPrice = function getPrice() {
@@ -6504,7 +6493,9 @@ var Question = function (_Component) {
           { className: 'pochtoy-q__promo' },
           (0, _preact.h)(
             'div',
-            { className: 'pochtoy-q__promo-inner' },
+            { className: 'pochtoy-q__promo-inner', ref: function ref(el) {
+                return _this2.promo = el;
+              } },
             (0, _preact.h)('div', { className: 'pochtoy-q__promo-text', dangerouslySetInnerHTML: { __html: props.test.question.promo } }),
             (0, _preact.h)(
               'button',
@@ -6513,10 +6504,6 @@ var Question = function (_Component) {
             )
           )
         );
-      };
-
-      var getLotImg = function getLotImg() {
-        return props.test.question.img.src;
       };
 
       return (0, _preact.h)(
@@ -6569,7 +6556,7 @@ var Question = function (_Component) {
                     function (state) {
                       return (0, _preact.h)(
                         'div',
-                        { className: 'pochtoy-crane pochtoy-crane--back', style: transitionCraneStyles[state] },
+                        { className: 'pochtoy-crane pochtoy-crane--back', style: _extends({}, craneDefaultStyles, transitionCraneStyles[state]) },
                         (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/e7cd2921-57c5-c8e1-93c5-5561828d474c/', alt: '', className: 'pochtoy-crane__claw pochtoy-crane__claw--b' })
                       );
                     }
@@ -6580,7 +6567,7 @@ var Question = function (_Component) {
                     function (state) {
                       return (0, _preact.h)(
                         'div',
-                        { className: 'pochtoy-crane', style: transitionCraneStyles[state], ref: function ref(el) {
+                        { className: 'pochtoy-crane', style: _extends({}, craneDefaultStyles, transitionCraneStyles[state]), ref: function ref(el) {
                             return _this2.crane = el;
                           } },
                         (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/adb3f56f-25d1-1e95-70c6-362f42c3a129/', alt: '', className: 'pochtoy-crane__grabber' }),
@@ -6599,9 +6586,9 @@ var Question = function (_Component) {
                               opacity: 1
                             }
                           });
-                        }, onTransitionEnd: _this2.continue, style: _extends({}, props.test.question.img.style, transitionLotStyles[status], state.lotImageStyles), src: getLotImg(), ref: function ref(el) {
+                        }, onTransitionEnd: _this2.continue, style: _extends({}, transitionLotStyles[status], state.lotImageStyles), src: props.test.question.img, ref: function ref(el) {
                           return _this2.lot = el;
-                        }, alt: '', className: 'pochtoy-lot__img' });
+                        }, alt: '', className: 'pochtoy-lot__img pochtoy-lot__img--' + (props.test.activeIndex + 1) });
                     }
                   )
                 ),
