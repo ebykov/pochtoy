@@ -490,8 +490,6 @@
           transform: translate3d(0, 0, 0);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 @media (min-width: 640px) {
   .pochtoy-lot__img {
@@ -551,8 +549,6 @@
           transform: translate3d(0, 0, 0);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 .pochtoy-crane--back {
   z-index: 1;
@@ -578,10 +574,18 @@
   z-index: 2;
   display: block;
   width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .pochtoy-crane__claw {
   position: absolute;
   z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .pochtoy-crane__claw--b {
   width: 8px;
