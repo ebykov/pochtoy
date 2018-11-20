@@ -225,10 +225,35 @@
 }
 .pochtoy-q {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.pochtoy-q__pager {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .pochtoy-q__pager {
+    top: 15px;
+    left: 20px;
+  }
+}
+.pochtoy-q__inner {
+  position: relative;
   margin: 40px auto 0;
 }
 @media (min-width: 640px) {
-  .pochtoy-q {
+  .pochtoy-q__inner {
     width: 560px;
     max-width: 100%;
     min-height: 442px;
@@ -237,7 +262,7 @@
 }
 .pochtoy-q__promo {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   bottom: 0;
   left: 0;
@@ -264,18 +289,21 @@
   height: 26px;
   padding: 0 10px;
   margin: 16px 0 0;
+  color: #000;
   font-size: 12px;
   border: 1px solid #000;
   background-color: #fff;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 .pochtoy-q__promo-btn:hover {
-  opacity: 0.6;
+  color: #fff;
+  background-color: #000;
 }
 @media (hover: none), (hover: on-demand) {
   .pochtoy-q__promo-btn:hover {
-    opacity: 1;
+    color: #000;
+    background-color: #fff;
   }
 }
 .pochtoy-q__promo-text {
@@ -364,7 +392,7 @@
   }
 }
 .pochtoy-q__btn {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 @media (min-width: 640px) {
@@ -392,7 +420,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 206px;
-  height: 100px;
+  height: 110px;
   margin: -12px 0 0 -40px;
 }
 .pochtoy-options__item {
@@ -453,8 +481,8 @@
 }
 .pochtoy-lot__img {
   position: absolute;
+  z-index: 2;
   bottom: 50px;
-  left: 55px;
 }
 @media (min-width: 640px) {
   .pochtoy-lot__img {
@@ -503,16 +531,20 @@
 }
 .pochtoy-crane {
   position: absolute;
-  z-index: 1;
-  top: -274px;
+  z-index: 3;
+  top: -275px;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 57px;
+  width: 58px;
+  height: 97px;
+}
+.pochtoy-crane--back {
+  z-index: 1;
 }
 @media (min-width: 640px) {
   .pochtoy-crane {
-    top: -92px;
+    top: -97px;
   }
 }
 .pochtoy-crane::before {
@@ -523,12 +555,37 @@
   right: 0;
   margin: 0 auto;
   width: 2px;
-  height: 100px;
+  height: 500px;
   background-color: #ff0c0c;
 }
-.pochtoy-crane__main {
+.pochtoy-crane__grabber {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 100%;
+}
+.pochtoy-crane__claw {
+  position: absolute;
+  z-index: 1;
+}
+.pochtoy-crane__claw--b {
+  width: 8px;
+  top: 86px;
+  right: 8px;
+}
+.pochtoy-crane__claw--l {
+  width: 36px;
+  top: 80px;
+  left: -32px;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+.pochtoy-crane__claw--r {
+  width: 29px;
+  top: 78px;
+  right: -19px;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 .pochtoy-result {
   max-width: 100%;

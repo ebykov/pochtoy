@@ -82,7 +82,7 @@ var PSB =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3184,7 +3184,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _redux = __webpack_require__(10);
 
-var _data = __webpack_require__(26);
+var _data = __webpack_require__(27);
 
 var _data2 = _interopRequireDefault(_data);
 
@@ -3304,22 +3304,22 @@ exports.default = (0, _redux.createStore)(reducers);
  * Social network services
  */
 
-var Service = __webpack_require__(43),
+var Service = __webpack_require__(44),
     utils   = __webpack_require__(4),
-    svg     = __webpack_require__(44);
+    svg     = __webpack_require__(45);
 
 var services = {
-    odnoklassniki: __webpack_require__(45),
-    vkontakte:     __webpack_require__(46),
-    facebook:      __webpack_require__(47),
-    twitter:       __webpack_require__(48),
-    gplus:         __webpack_require__(49),
-    pocket:        __webpack_require__(50),
-    telegram:      __webpack_require__(51),
-    whatsapp:      __webpack_require__(52),
-    viber:         __webpack_require__(53),
-    email:         __webpack_require__(54),
-    more:          __webpack_require__(55)
+    odnoklassniki: __webpack_require__(46),
+    vkontakte:     __webpack_require__(47),
+    facebook:      __webpack_require__(48),
+    twitter:       __webpack_require__(49),
+    gplus:         __webpack_require__(50),
+    pocket:        __webpack_require__(51),
+    telegram:      __webpack_require__(52),
+    whatsapp:      __webpack_require__(53),
+    viber:         __webpack_require__(54),
+    email:         __webpack_require__(55),
+    more:          __webpack_require__(56)
 };
 
 utils.each(services, function (service, key) {
@@ -3973,7 +3973,7 @@ if (false) {}
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
 /* global window */
 
 
@@ -3992,7 +3992,7 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12), __webpack_require__(23)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12), __webpack_require__(24)(module)))
 
 /***/ }),
 /* 12 */
@@ -4027,6 +4027,30 @@ module.exports = g;
 "use strict";
 
 
+var _CSSTransition = _interopRequireDefault(__webpack_require__(28));
+
+var _ReplaceTransition = _interopRequireDefault(__webpack_require__(34));
+
+var _TransitionGroup = _interopRequireDefault(__webpack_require__(17));
+
+var _Transition = _interopRequireDefault(__webpack_require__(14));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = {
+  Transition: _Transition.default,
+  TransitionGroup: _TransitionGroup.default,
+  ReplaceTransition: _ReplaceTransition.default,
+  CSSTransition: _CSSTransition.default
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 exports.__esModule = true;
 exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = void 0;
 
@@ -4036,9 +4060,9 @@ var _react = _interopRequireDefault(__webpack_require__(5));
 
 var _reactDom = _interopRequireDefault(__webpack_require__(5));
 
-var _reactLifecyclesCompat = __webpack_require__(14);
+var _reactLifecyclesCompat = __webpack_require__(15);
 
-var _PropTypes = __webpack_require__(15);
+var _PropTypes = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4488,7 +4512,7 @@ var _default = (0, _reactLifecyclesCompat.polyfill)(Transition);
 exports.default = _default;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4655,7 +4679,7 @@ function polyfill(Component) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4710,7 +4734,7 @@ var classNamesShape = _propTypes.default.oneOfType([_propTypes.default.string, _
 exports.classNamesShape = classNamesShape;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4723,7 +4747,7 @@ var _propTypes = _interopRequireDefault(__webpack_require__(2));
 
 var _react = _interopRequireDefault(__webpack_require__(5));
 
-var _reactLifecyclesCompat = __webpack_require__(14);
+var _reactLifecyclesCompat = __webpack_require__(15);
 
 var _ChildMapping = __webpack_require__(35);
 
@@ -4861,7 +4885,7 @@ exports.default = _default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 var isAvailable = function() {
@@ -4932,7 +4956,7 @@ var storage = {
 module.exports = storage;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4957,13 +4981,13 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _special = __webpack_require__(20);
+var _special = __webpack_require__(21);
 
 var _special2 = _interopRequireDefault(_special);
 
@@ -4974,7 +4998,7 @@ module.exports.Special = _special2.default; /**
                                              */
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4988,13 +5012,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
 // import request from './lib/request';
 
 
-__webpack_require__(21);
+__webpack_require__(22);
 
 var _preact = __webpack_require__(0);
 
 var _preactRedux = __webpack_require__(6);
 
-var _app = __webpack_require__(24);
+var _app = __webpack_require__(25);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -5090,14 +5114,14 @@ var Special = function () {
 exports.default = Special;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 22 */,
-/* 23 */
+/* 23 */,
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -5127,7 +5151,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5143,7 +5167,7 @@ var _preact = __webpack_require__(0);
 
 var _preactRedux = __webpack_require__(6);
 
-var _enter = __webpack_require__(25);
+var _enter = __webpack_require__(26);
 
 var _enter2 = _interopRequireDefault(_enter);
 
@@ -5151,7 +5175,7 @@ var _question = __webpack_require__(37);
 
 var _question2 = _interopRequireDefault(_question);
 
-var _result = __webpack_require__(38);
+var _result = __webpack_require__(39);
 
 var _result2 = _interopRequireDefault(_result);
 
@@ -5247,7 +5271,7 @@ var mapStateToProps = function mapStateToProps(store) {
 exports.default = (0, _preactRedux.connect)(mapStateToProps)(App);
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5269,7 +5293,7 @@ var _store = __webpack_require__(8);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _reactTransitionGroup = __webpack_require__(27);
+var _reactTransitionGroup = __webpack_require__(13);
 
 var _analytics = __webpack_require__(7);
 
@@ -5354,7 +5378,7 @@ var Enter = function (_Component) {
                 (0, _preact.h)(
                   'span',
                   { style: 'color: #FF3939; font-weight: 700;' },
-                  '9\u2009999'
+                  '9 999'
                 ),
                 '. \u041F\u043E\u0440\u0430 \u0443\u0437\u043D\u0430\u0442\u044C, \u043D\u0430 \u0447\u0442\u043E \u0432\u044B \u0433\u043E\u0442\u043E\u0432\u044B \u043F\u043E\u0439\u0442\u0438 \u0440\u0430\u0434\u0438 \u043D\u0430\u0436\u0438\u0432\u044B \u0438 \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u043B\u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u043E\u043B\u044E\u0431\u0438\u0435.'
               ),
@@ -5391,7 +5415,7 @@ var mapStateToProps = function mapStateToProps(store) {
 exports.default = (0, _preactRedux.connect)(mapStateToProps)(Enter);
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5405,66 +5429,99 @@ exports.default = {
   description: '',
   questions: [{
     act: 'Влезть в начало очереди из 15 агрессивных людей',
-    product: 'Китайский флагманский смартфон за 23 000 рублей',
+    lot: 'Китайский флагманский смартфон за 23 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/95f70e1c-448f-f99d-a983-c1453af530f7/',
+      style: {
+        left: '55px'
+      }
+    },
     price: 23000
   }, {
     act: 'Просидеть ночь у магазина при температуре -11 градусов',
-    product: 'Новые «умные» часы за 29 000 рублей',
+    lot: 'Новые «умные» часы за 29 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/051a67c7-0fd7-77a8-1e28-2a18d828ddd6/',
+      style: {
+        left: '68px',
+        width: '80px'
+      }
+    },
     price: 29000,
     promo: '<p>Одна пара <a href="https://www.reddit.com/r/AskReddit/comments/1re0rl/retail_employees_of_reddit_what_are_your_black/cdmfyn7/" target="_blank">простояла</a> в очереди у магазина Target 14 часов. Попав внутрь, они прошли мимо полок с техникой и набили корзину бумажными полотенцами по $2 за упаковку.</p><p>С Pochtoy.com стоять в очередях не нужно. Товары со скидкой — в том числе часы — можно <a href="https://www.pochtoy.com/shops/watches-and-jewelry/" target="_blank">заказать</a> из США.</p>'
   }, {
     act: 'Соврать полиции о массовых беспорядках у точки продаж',
-    product: 'Игровая консоль последнего поколения за 39 000 рублей',
+    lot: 'Игровая консоль последнего поколения за 39 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/28ac8c03-742a-2880-abe2-ab28001ac534/',
+      style: {
+        left: '60px',
+        bottom: '64px',
+        width: '90px'
+      }
+    },
     price: 39000
   }, {
     act: 'Притвориться инвалидом',
-    product: 'Ультраширокий 4К-монитор за 48 000 рублей',
+    lot: 'Ультраширокий 4К-монитор за 48 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/84be7672-fbec-36fa-b7c1-87bd4f2933ca/',
+      style: {
+        left: '6px',
+        width: '206px'
+      }
+    },
     price: 48000
   }, {
     act: 'Натравить агрессивную толпу на продавца-консультанта, чтобы отвлечь внимание',
-    product: 'Флагманский планшет со стилусом за 86 000 рублей',
+    lot: 'Флагманский планшет со стилусом за 86 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/4cf9e8d4-ef44-77c7-f102-a99528eb68b1/',
+      style: {
+        left: '22px',
+        width: '172px'
+      }
+    },
     price: 86000,
     promo: '<p>В 2005 году отчаявшиеся сотрудники Walmart во Флориде стали <a href="https://www.brainjet.com/random/2355420/15-worst-black-friday-incidents/" target="_blank">кидать</a> ноутбуки в толпу покупателей, а те в ответ устроили потасовку с охраной.</p><p>С Pochtoy всё проще — технику можно со скидкой <a href="https://www.pochtoy.com/shops/electronics/" target="_blank">заказать</a> в крупных американских магазинах вроде легендарного Radioshack или Newegg.</p>'
   }, {
     act: 'Пофлиртовать с усатым охранником',
-    product: 'Игровой ноутбук за 98 000 рублей',
+    lot: 'Игровой ноутбук за 98 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/e3662945-e391-fe65-c19d-4de1540422f2/',
+      style: {
+        left: '18px',
+        width: '177px'
+      }
+    },
     price: 98000
   }, {
     act: 'Набить татуировку с логотипом бренда телевизоров',
-    product: 'Безрамочный 4К-телевизор за 170 000 рублей',
+    lot: 'Безрамочный 4К-телевизор за 170 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/a9652e16-3354-0cdc-e09f-0ee1a7054459/',
+      style: {
+        left: '6px',
+        width: '206px'
+      }
+    },
     price: 170000
   }, {
     act: 'Назвать первенца Аквариусом в честь модели нового автомобиля',
-    product: 'Серый универсал за 651 000 рублей',
+    lot: 'Серый универсал за 651 000 рублей',
+    img: {
+      src: 'https://leonardo.osnova.io/40179d16-1c06-3056-1d06-f76d2dea9edd/',
+      style: {
+        left: '22px',
+        bottom: '56px',
+        width: '162px'
+      }
+    },
     price: 651000
   }],
   result: {
     text: '<p>Решать моральные дилеммы не нужно, если заказывать товары из-за рубежа, сидя дома — в США скидки на «Чёрную пятницу» достигают 80%.</p><p>С помощью Pochtoy.com можно безопасно закупиться во время потребительского безумия. Сервис предоставляет клиентам американский почтовый адрес для заказов в интернет-магазинах США и собирает все покупки в одну посылку, которая затем доставляется до получателя.</p>'
   }
-};
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _CSSTransition = _interopRequireDefault(__webpack_require__(28));
-
-var _ReplaceTransition = _interopRequireDefault(__webpack_require__(34));
-
-var _TransitionGroup = _interopRequireDefault(__webpack_require__(16));
-
-var _Transition = _interopRequireDefault(__webpack_require__(13));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-module.exports = {
-  Transition: _Transition.default,
-  TransitionGroup: _TransitionGroup.default,
-  ReplaceTransition: _ReplaceTransition.default,
-  CSSTransition: _CSSTransition.default
 };
 
 /***/ }),
@@ -5485,9 +5542,9 @@ var _removeClass = _interopRequireDefault(__webpack_require__(33));
 
 var _react = _interopRequireDefault(__webpack_require__(5));
 
-var _Transition = _interopRequireDefault(__webpack_require__(13));
+var _Transition = _interopRequireDefault(__webpack_require__(14));
 
-var _PropTypes = __webpack_require__(15);
+var _PropTypes = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5831,7 +5888,7 @@ var _react = _interopRequireDefault(__webpack_require__(5));
 
 var _reactDom = __webpack_require__(5);
 
-var _TransitionGroup = _interopRequireDefault(__webpack_require__(16));
+var _TransitionGroup = _interopRequireDefault(__webpack_require__(17));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6151,6 +6208,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _preact = __webpack_require__(0);
@@ -6161,9 +6220,15 @@ var _store = __webpack_require__(8);
 
 var _store2 = _interopRequireDefault(_store);
 
+var _reactTransitionGroup = __webpack_require__(13);
+
 var _analytics = __webpack_require__(7);
 
 var Analytics = _interopRequireWildcard(_analytics);
+
+var _smoothscrollPolyfill = __webpack_require__(38);
+
+var _smoothscrollPolyfill2 = _interopRequireDefault(_smoothscrollPolyfill);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -6176,6 +6241,31 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // import Svg from '../svg';
+
+_smoothscrollPolyfill2.default.polyfill();
+
+var transitionCraneStyles = {};
+
+var transitionClawLStyles = {
+  entered: {
+    transition: 'transform 100ms linear',
+    transform: 'rotate(-30deg)'
+  }
+};
+
+var transitionClawRStyles = {
+  entered: {
+    transition: 'transform 100ms linear',
+    transform: 'rotate(22deg)'
+  }
+};
+
+var transitionLotStyles = {
+  entered: {
+    transition: 'transform 1s linear',
+    transform: 'translateY(-500px)'
+  }
+};
 
 var options = [{
   value: 80,
@@ -6194,7 +6284,7 @@ var options = [{
   label: '10%'
 }, {
   value: 0,
-  label: 'Неа'
+  label: 'Ни за что'
 }];
 
 var Option = function Option(props, state) {
@@ -6204,7 +6294,7 @@ var Option = function Option(props, state) {
     (0, _preact.h)(
       'div',
       { className: 'pochtoy-option' + (props.isActive ? ' is-active' : ''), onClick: function onClick(e) {
-          return props.onClick(props.item.value);
+          return props.onClick(e, props.item.value);
         } },
       (0, _preact.h)('div', { className: 'pochtoy-option__btn' }),
       (0, _preact.h)(
@@ -6216,114 +6306,128 @@ var Option = function Option(props, state) {
   );
 };
 
-var OptionList = function (_Component) {
-  _inherits(OptionList, _Component);
+var OptionList = function OptionList(props, state) {
+  var getOptions = function getOptions() {
+    return props.items.map(function (item, i) {
+      var isActive = props.activeValue === item.value;
+      return (0, _preact.h)(Option, { key: i, item: item, isActive: isActive, onClick: props.onClick });
+    });
+  };
 
-  function OptionList() {
-    _classCallCheck(this, OptionList);
+  return (0, _preact.h)(
+    'div',
+    { className: 'pochtoy-options' },
+    getOptions()
+  );
+};
 
-    var _this = _possibleConstructorReturn(this, (OptionList.__proto__ || Object.getPrototypeOf(OptionList)).call(this));
-
-    _this.onClick = _this.onClick.bind(_this);
-    return _this;
-  }
-
-  _createClass(OptionList, [{
-    key: 'onClick',
-    value: function onClick(value) {
-      this.setState({
-        activeValue: value
-      });
-
-      this.props.onClick(value);
-    }
-  }, {
-    key: 'render',
-    value: function render(props, state) {
-      var _this2 = this;
-
-      var getOptions = function getOptions() {
-        return props.items.map(function (item, i) {
-          var isActive = props.activeValue === item.value;
-          return (0, _preact.h)(Option, { key: i, item: item, isActive: isActive, onClick: _this2.onClick });
-        });
-      };
-
-      return (0, _preact.h)(
-        'div',
-        { className: 'pochtoy-options' },
-        getOptions()
-      );
-    }
-  }]);
-
-  return OptionList;
-}(_preact.Component);
-
-var Question = function (_Component2) {
-  _inherits(Question, _Component2);
+var Question = function (_Component) {
+  _inherits(Question, _Component);
 
   function Question() {
     _classCallCheck(this, Question);
 
-    var _this3 = _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
+    var _this = _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
 
-    _this3.answer = _this3.answer.bind(_this3);
-    _this3.next = _this3.next.bind(_this3);
-    _this3.result = _this3.result.bind(_this3);
-    return _this3;
+    _this.setValue = _this.setValue.bind(_this);
+    _this.continue = _this.continue.bind(_this);
+    _this.next = _this.next.bind(_this);
+    _this.result = _this.result.bind(_this);
+    return _this;
   }
 
   _createClass(Question, [{
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps, prevState, snapshot) {}
   }, {
-    key: 'answer',
-    value: function answer(value) {
+    key: 'setValue',
+    value: function setValue(e, value) {
+      if (this.answered) {
+        return;
+      }
+
       this.setState({
         answerValue: value
       });
     }
   }, {
-    key: 'next',
-    value: function next() {
+    key: 'continue',
+    value: function _continue() {
       if (this.state.answerValue === undefined) {
         return;
       }
 
-      if (!this.state.showPromo && this.props.test.question.promo) {
+      this.answered = true;
+
+      Analytics.sendEvent('Continue');
+
+      window.scroll({
+        top: this.props.test.params.container.offsetTop,
+        behavior: 'smooth'
+      });
+
+      if (this.state.answerValue && !this.state.grabbing) {
+        var craneRect = this.crane.getBoundingClientRect();
+        var lotRect = this.lot.getBoundingClientRect();
+        var offsetY = lotRect.y - craneRect.y - craneRect.height;
+
+        console.log(offsetY);
+
+        transitionCraneStyles = {
+          entering: {
+            transition: 'transform 200ms linear',
+            transform: 'translateY(' + offsetY + 'px)'
+          },
+          entered: {
+            transition: 'transform 1s 200ms linear',
+            transform: 'translateY(' + (-500 + offsetY) + 'px)'
+          }
+        };
+        this.setState({
+          grabbing: true
+        });
+
+        return;
+      } else if (!this.state.showPromo && this.props.test.question.promo) {
         this.setState({
           showPromo: true
         });
-        return;
-      }
 
-      Analytics.sendEvent('Next');
+        return;
+      } else {
+        this.answered = false;
+      }
 
       _store2.default.dispatch({
         type: 'TEST_ANSWER',
         answer: this.state.answerValue
       });
 
-      _store2.default.dispatch({
-        type: 'TEST_NEXT'
-      });
+      if (this.props.test.activeIndex < this.props.test.questionsCount - 1) {
+        this.next();
+      } else {
+        this.result();
+      }
 
       this.setState({
         answerValue: undefined,
-        showPromo: false
+        showPromo: false,
+        grabbing: false,
+        lotImageStyles: {
+          opacity: 0
+        }
+      });
+    }
+  }, {
+    key: 'next',
+    value: function next() {
+      _store2.default.dispatch({
+        type: 'TEST_NEXT'
       });
     }
   }, {
     key: 'result',
     value: function result() {
-      Analytics.sendEvent('Result');
-
-      _store2.default.dispatch({
-        type: 'TEST_ANSWER',
-        answer: this.state.answerValue
-      });
-
       _store2.default.dispatch({
         type: 'TEST_STATUS',
         status: 'RESULT'
@@ -6332,7 +6436,7 @@ var Question = function (_Component2) {
   }, {
     key: 'render',
     value: function render(props, state) {
-      var _this4 = this;
+      var _this2 = this;
 
       var getNotice = function getNotice() {
         if (state.answerValue === undefined) {
@@ -6392,11 +6496,15 @@ var Question = function (_Component2) {
             (0, _preact.h)('div', { className: 'pochtoy-q__promo-text', dangerouslySetInnerHTML: { __html: props.test.question.promo } }),
             (0, _preact.h)(
               'button',
-              { className: 'pochtoy-q__promo-btn', onClick: _this4.next },
+              { className: 'pochtoy-q__promo-btn', onClick: _this2.continue },
               '\u0414\u0430\u043B\u0435\u0435'
             )
           )
         );
+      };
+
+      var getLotImg = function getLotImg() {
+        return props.test.question.img.src;
       };
 
       return (0, _preact.h)(
@@ -6405,76 +6513,116 @@ var Question = function (_Component2) {
         getPromo(),
         (0, _preact.h)(
           'div',
-          { className: 'pochtoy-q__body' },
+          { className: 'pochtoy-q__pager' },
+          props.test.activeIndex + 1 + '/' + props.test.questionsCount
+        ),
+        (0, _preact.h)(
+          'div',
+          { className: 'pochtoy-q__inner' },
           (0, _preact.h)(
             'div',
-            { className: 'pochtoy-q__label' },
-            '\u0427\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C:'
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__title' },
-            props.test.question.act
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__label' },
-            '\u041B\u043E\u0442:'
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__subtitle' },
-            props.test.question.product
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__lot' },
+            { className: 'pochtoy-q__body' },
             (0, _preact.h)(
               'div',
-              { className: 'pochtoy-crane' },
-              (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/863cbbd9-c53c-b751-7dc2-c99e38736d3d/', alt: '', className: 'pochtoy-crane__main' })
+              { className: 'pochtoy-q__label' },
+              '\u0427\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C:'
             ),
             (0, _preact.h)(
               'div',
-              { className: 'pochtoy-lot' },
+              { className: 'pochtoy-q__title' },
+              props.test.question.act
+            ),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-q__label' },
+              '\u041B\u043E\u0442:'
+            ),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-q__subtitle' },
+              props.test.question.lot
+            ),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-q__lot' },
               (0, _preact.h)(
                 'div',
-                { className: 'pochtoy-lot__body' },
-                (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/95f70e1c-448f-f99d-a983-c1453af530f7/', alt: '', className: 'pochtoy-lot__img' })
+                { className: 'pochtoy-lot' },
+                (0, _preact.h)(
+                  'div',
+                  { className: 'pochtoy-lot__body' },
+                  (0, _preact.h)(
+                    _reactTransitionGroup.Transition,
+                    { 'in': state.grabbing, timeout: 200 },
+                    function (state) {
+                      return (0, _preact.h)(
+                        'div',
+                        { className: 'pochtoy-crane pochtoy-crane--back', style: transitionCraneStyles[state] },
+                        (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/e7cd2921-57c5-c8e1-93c5-5561828d474c/', alt: '', className: 'pochtoy-crane__claw pochtoy-crane__claw--b' })
+                      );
+                    }
+                  ),
+                  (0, _preact.h)(
+                    _reactTransitionGroup.Transition,
+                    { 'in': state.grabbing, timeout: 200 },
+                    function (state) {
+                      return (0, _preact.h)(
+                        'div',
+                        { className: 'pochtoy-crane', style: transitionCraneStyles[state], ref: function ref(el) {
+                            return _this2.crane = el;
+                          } },
+                        (0, _preact.h)('img', { src: 'https://leonardo.osnova.io/adb3f56f-25d1-1e95-70c6-362f42c3a129/', alt: '', className: 'pochtoy-crane__grabber' }),
+                        (0, _preact.h)('img', { style: transitionClawLStyles[state], src: 'https://leonardo.osnova.io/9586ee7f-571f-d238-75f7-4b34070a3a62/', alt: '', className: 'pochtoy-crane__claw pochtoy-crane__claw--l' }),
+                        (0, _preact.h)('img', { style: transitionClawRStyles[state], src: 'https://leonardo.osnova.io/f433ab26-fa16-ad9e-7a31-396a74236d93/', alt: '', className: 'pochtoy-crane__claw pochtoy-crane__claw--r' })
+                      );
+                    }
+                  ),
+                  (0, _preact.h)(
+                    _reactTransitionGroup.Transition,
+                    { 'in': state.grabbing, timeout: 400 },
+                    function (status) {
+                      return (0, _preact.h)('img', { onLoad: function onLoad() {
+                          _this2.setState({
+                            lotImageStyles: {
+                              opacity: 1
+                            }
+                          });
+                        }, onTransitionEnd: _this2.continue, style: _extends({}, props.test.question.img.style, transitionLotStyles[status], state.lotImageStyles), src: getLotImg(), ref: function ref(el) {
+                          return _this2.lot = el;
+                        }, alt: '', className: 'pochtoy-lot__img' });
+                    }
+                  )
+                ),
+                (0, _preact.h)(
+                  'div',
+                  { className: 'pochtoy-lot__bottom' },
+                  getPrice()
+                )
               ),
               (0, _preact.h)(
                 'div',
-                { className: 'pochtoy-lot__bottom' },
-                getPrice()
+                { className: 'pochtoy-q__notice' },
+                getNotice()
               )
             ),
             (0, _preact.h)(
               'div',
-              { className: 'pochtoy-q__notice' },
-              getNotice()
-            )
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__label pochtoy-q__label--options' },
-            '\u0420\u0430\u0437\u043C\u0435\u0440 \u0441\u043A\u0438\u0434\u043A\u0438:'
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__options' },
-            (0, _preact.h)(OptionList, { items: options, activeValue: state.answerValue, onClick: this.answer })
-          ),
-          (0, _preact.h)(
-            'div',
-            { className: 'pochtoy-q__btn' },
-            props.test.activeIndex < props.test.questionsCount - 1 ? (0, _preact.h)(
-              'button',
-              { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: this.next },
-              '$ \u0421\u043E\u0433\u043B\u0430\u0441\u0435\u043D $'
-            ) : (0, _preact.h)(
-              'button',
-              { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: this.result },
-              '\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442'
+              { className: 'pochtoy-q__label pochtoy-q__label--options' },
+              '\u0420\u0430\u0437\u043C\u0435\u0440 \u0441\u043A\u0438\u0434\u043A\u0438:'
+            ),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-q__options' },
+              (0, _preact.h)(OptionList, { items: options, activeValue: state.answerValue, onClick: this.setValue })
+            ),
+            (0, _preact.h)(
+              'div',
+              { className: 'pochtoy-q__btn' },
+              (0, _preact.h)(
+                'button',
+                { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: this.continue },
+                props.test.activeIndex < props.test.questionsCount - 1 ? 'Согласен' : 'Результат'
+              )
             )
           )
         )
@@ -6495,6 +6643,448 @@ exports.default = (0, _preactRedux.connect)(mapStateToProps)(Question);
 
 /***/ }),
 /* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* smoothscroll v0.4.0 - 2018 - Dustan Kasten, Jeremias Menichelli - MIT License */
+(function () {
+  'use strict';
+
+  // polyfill
+  function polyfill() {
+    // aliases
+    var w = window;
+    var d = document;
+
+    // return if scroll behavior is supported and polyfill is not forced
+    if (
+      'scrollBehavior' in d.documentElement.style &&
+      w.__forceSmoothScrollPolyfill__ !== true
+    ) {
+      return;
+    }
+
+    // globals
+    var Element = w.HTMLElement || w.Element;
+    var SCROLL_TIME = 468;
+
+    // object gathering original scroll methods
+    var original = {
+      scroll: w.scroll || w.scrollTo,
+      scrollBy: w.scrollBy,
+      elementScroll: Element.prototype.scroll || scrollElement,
+      scrollIntoView: Element.prototype.scrollIntoView
+    };
+
+    // define timing method
+    var now =
+      w.performance && w.performance.now
+        ? w.performance.now.bind(w.performance)
+        : Date.now;
+
+    /**
+     * indicates if a the current browser is made by Microsoft
+     * @method isMicrosoftBrowser
+     * @param {String} userAgent
+     * @returns {Boolean}
+     */
+    function isMicrosoftBrowser(userAgent) {
+      var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+      return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+    }
+
+    /*
+     * IE has rounding bug rounding down clientHeight and clientWidth and
+     * rounding up scrollHeight and scrollWidth causing false positives
+     * on hasScrollableSpace
+     */
+    var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+    /**
+     * changes scroll position inside an element
+     * @method scrollElement
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function scrollElement(x, y) {
+      this.scrollLeft = x;
+      this.scrollTop = y;
+    }
+
+    /**
+     * returns result of applying ease math function to a number
+     * @method ease
+     * @param {Number} k
+     * @returns {Number}
+     */
+    function ease(k) {
+      return 0.5 * (1 - Math.cos(Math.PI * k));
+    }
+
+    /**
+     * indicates if a smooth behavior should be applied
+     * @method shouldBailOut
+     * @param {Number|Object} firstArg
+     * @returns {Boolean}
+     */
+    function shouldBailOut(firstArg) {
+      if (
+        firstArg === null ||
+        typeof firstArg !== 'object' ||
+        firstArg.behavior === undefined ||
+        firstArg.behavior === 'auto' ||
+        firstArg.behavior === 'instant'
+      ) {
+        // first argument is not an object/null
+        // or behavior is auto, instant or undefined
+        return true;
+      }
+
+      if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+        // first argument is an object and behavior is smooth
+        return false;
+      }
+
+      // throw error when behavior is not supported
+      throw new TypeError(
+        'behavior member of ScrollOptions ' +
+          firstArg.behavior +
+          ' is not a valid value for enumeration ScrollBehavior.'
+      );
+    }
+
+    /**
+     * indicates if an element has scrollable space in the provided axis
+     * @method hasScrollableSpace
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function hasScrollableSpace(el, axis) {
+      if (axis === 'Y') {
+        return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+      }
+
+      if (axis === 'X') {
+        return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+      }
+    }
+
+    /**
+     * indicates if an element has a scrollable overflow property in the axis
+     * @method canOverflow
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function canOverflow(el, axis) {
+      var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+      return overflowValue === 'auto' || overflowValue === 'scroll';
+    }
+
+    /**
+     * indicates if an element can be scrolled in either axis
+     * @method isScrollable
+     * @param {Node} el
+     * @param {String} axis
+     * @returns {Boolean}
+     */
+    function isScrollable(el) {
+      var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+      var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+      return isScrollableY || isScrollableX;
+    }
+
+    /**
+     * finds scrollable parent of an element
+     * @method findScrollableParent
+     * @param {Node} el
+     * @returns {Node} el
+     */
+    function findScrollableParent(el) {
+      var isBody;
+
+      do {
+        el = el.parentNode;
+
+        isBody = el === d.body;
+      } while (isBody === false && isScrollable(el) === false);
+
+      isBody = null;
+
+      return el;
+    }
+
+    /**
+     * self invoked function that, given a context, steps through scrolling
+     * @method step
+     * @param {Object} context
+     * @returns {undefined}
+     */
+    function step(context) {
+      var time = now();
+      var value;
+      var currentX;
+      var currentY;
+      var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+      // avoid elapsed times higher than one
+      elapsed = elapsed > 1 ? 1 : elapsed;
+
+      // apply easing to elapsed time
+      value = ease(elapsed);
+
+      currentX = context.startX + (context.x - context.startX) * value;
+      currentY = context.startY + (context.y - context.startY) * value;
+
+      context.method.call(context.scrollable, currentX, currentY);
+
+      // scroll more if we have not reached our destination
+      if (currentX !== context.x || currentY !== context.y) {
+        w.requestAnimationFrame(step.bind(w, context));
+      }
+    }
+
+    /**
+     * scrolls window or element with a smooth behavior
+     * @method smoothScroll
+     * @param {Object|Node} el
+     * @param {Number} x
+     * @param {Number} y
+     * @returns {undefined}
+     */
+    function smoothScroll(el, x, y) {
+      var scrollable;
+      var startX;
+      var startY;
+      var method;
+      var startTime = now();
+
+      // define scroll context
+      if (el === d.body) {
+        scrollable = w;
+        startX = w.scrollX || w.pageXOffset;
+        startY = w.scrollY || w.pageYOffset;
+        method = original.scroll;
+      } else {
+        scrollable = el;
+        startX = el.scrollLeft;
+        startY = el.scrollTop;
+        method = scrollElement;
+      }
+
+      // scroll looping over a frame
+      step({
+        scrollable: scrollable,
+        method: method,
+        startTime: startTime,
+        startX: startX,
+        startY: startY,
+        x: x,
+        y: y
+      });
+    }
+
+    // ORIGINAL METHODS OVERRIDES
+    // w.scroll and w.scrollTo
+    w.scroll = w.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scroll.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object'
+              ? arguments[0]
+              : w.scrollX || w.pageXOffset,
+          // use top prop, second argument if present or fallback to scrollY
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined
+              ? arguments[1]
+              : w.scrollY || w.pageYOffset
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : w.scrollX || w.pageXOffset,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : w.scrollY || w.pageYOffset
+      );
+    };
+
+    // w.scrollBy
+    w.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0])) {
+        original.scrollBy.call(
+          w,
+          arguments[0].left !== undefined
+            ? arguments[0].left
+            : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+          arguments[0].top !== undefined
+            ? arguments[0].top
+            : arguments[1] !== undefined ? arguments[1] : 0
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        w,
+        d.body,
+        ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+        ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+      );
+    };
+
+    // Element.prototype.scroll and Element.prototype.scrollTo
+    Element.prototype.scroll = Element.prototype.scrollTo = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        // if one number is passed, throw error to match Firefox implementation
+        if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+          throw new SyntaxError('Value could not be converted');
+        }
+
+        original.elementScroll.call(
+          this,
+          // use left prop, first number argument or fallback to scrollLeft
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left
+            : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+          // use top prop, second argument or fallback to scrollTop
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top
+            : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+        );
+
+        return;
+      }
+
+      var left = arguments[0].left;
+      var top = arguments[0].top;
+
+      // LET THE SMOOTHNESS BEGIN!
+      smoothScroll.call(
+        this,
+        this,
+        typeof left === 'undefined' ? this.scrollLeft : ~~left,
+        typeof top === 'undefined' ? this.scrollTop : ~~top
+      );
+    };
+
+    // Element.prototype.scrollBy
+    Element.prototype.scrollBy = function() {
+      // avoid action when no arguments are passed
+      if (arguments[0] === undefined) {
+        return;
+      }
+
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.elementScroll.call(
+          this,
+          arguments[0].left !== undefined
+            ? ~~arguments[0].left + this.scrollLeft
+            : ~~arguments[0] + this.scrollLeft,
+          arguments[0].top !== undefined
+            ? ~~arguments[0].top + this.scrollTop
+            : ~~arguments[1] + this.scrollTop
+        );
+
+        return;
+      }
+
+      this.scroll({
+        left: ~~arguments[0].left + this.scrollLeft,
+        top: ~~arguments[0].top + this.scrollTop,
+        behavior: arguments[0].behavior
+      });
+    };
+
+    // Element.prototype.scrollIntoView
+    Element.prototype.scrollIntoView = function() {
+      // avoid smooth behavior if not required
+      if (shouldBailOut(arguments[0]) === true) {
+        original.scrollIntoView.call(
+          this,
+          arguments[0] === undefined ? true : arguments[0]
+        );
+
+        return;
+      }
+
+      // LET THE SMOOTHNESS BEGIN!
+      var scrollableParent = findScrollableParent(this);
+      var parentRects = scrollableParent.getBoundingClientRect();
+      var clientRects = this.getBoundingClientRect();
+
+      if (scrollableParent !== d.body) {
+        // reveal element inside parent
+        smoothScroll.call(
+          this,
+          scrollableParent,
+          scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+        );
+
+        // reveal parent in viewport unless is fixed
+        if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+          w.scrollBy({
+            left: parentRects.left,
+            top: parentRects.top,
+            behavior: 'smooth'
+          });
+        }
+      } else {
+        // reveal element in viewport
+        w.scrollBy({
+          left: clientRects.left,
+          top: clientRects.top,
+          behavior: 'smooth'
+        });
+      }
+    };
+  }
+
+  if (true) {
+    // commonjs
+    module.exports = { polyfill: polyfill };
+  } else {}
+
+}());
+
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6518,11 +7108,11 @@ var _analytics = __webpack_require__(7);
 
 var Analytics = _interopRequireWildcard(_analytics);
 
-var _share = __webpack_require__(39);
+var _share = __webpack_require__(40);
 
 var Share = _interopRequireWildcard(_share);
 
-var _svg = __webpack_require__(59);
+var _svg = __webpack_require__(60);
 
 var _svg2 = _interopRequireDefault(_svg);
 
@@ -6710,7 +7300,7 @@ var mapStateToProps = function mapStateToProps(store) {
 exports.default = (0, _preactRedux.connect)(mapStateToProps)(Result);
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6721,11 +7311,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.make = exports.init = undefined;
 
-var _cmttLikely = __webpack_require__(40);
+var _cmttLikely = __webpack_require__(41);
 
 var _cmttLikely2 = _interopRequireDefault(_cmttLikely);
 
-var _dom = __webpack_require__(58);
+var _dom = __webpack_require__(59);
 
 var _analytics = __webpack_require__(7);
 
@@ -6777,12 +7367,12 @@ var make = exports.make = function make(parentContainer) {
 };
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 'use strict';
 
-var Likely = __webpack_require__(41),
+var Likely = __webpack_require__(42),
     config = __webpack_require__(1),
     utils = __webpack_require__(4),
     dom = __webpack_require__(3);
@@ -6833,16 +7423,16 @@ likely.defaults = {
 module.exports = likely;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Button = __webpack_require__(42);
+var Button = __webpack_require__(43);
 
 var services = __webpack_require__(9),
     config   = __webpack_require__(1),
     utils = __webpack_require__(4),
     dom = __webpack_require__(3),
-    storage = __webpack_require__(17);
+    storage = __webpack_require__(18);
 
 /**
  * Main widget view
@@ -6985,15 +7575,15 @@ Likely.prototype = {
 module.exports = Likely;
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var services = __webpack_require__(9),
     config = __webpack_require__(1),
-    fetch = __webpack_require__(56),
+    fetch = __webpack_require__(57),
     utils = __webpack_require__(4),
     dom = __webpack_require__(3),
-    storage = __webpack_require__(17);
+    storage = __webpack_require__(18);
 
 var htmlSpan = '<span class="{className}">{content}</span>';
 
@@ -7258,7 +7848,7 @@ LikelyButton.prototype = {
 module.exports = LikelyButton;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dom = __webpack_require__(3);
@@ -7291,13 +7881,13 @@ module.exports = function (options) {
 };
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module) {
 
 module.exports = {"facebook":"5.9 16h3.3V8h2.2l.3-2.8H9.2V3.8c0-.7.1-1.1 1.1-1.1h1.4V0H9.5C6.9 0 5.9 1.3 5.9 3.6v1.7H4.3V8H6v8","twitter":"15.96 3.42c-.04.153-.144.31-.237.414l-.118.058v.118l-.59.532-.237.295c-.05.036-.398.21-.413.237V6.49h-.06v.473h-.058v.294h-.058v.296h-.06v.235h-.06v.237h-.058c-.1.355-.197.71-.295 1.064h-.06v.116h-.06c-.02.1-.04.197-.058.296h-.06c-.04.118-.08.237-.118.355h-.06c-.038.118-.078.236-.117.353l-.118.06-.06.235-.117.06v.116l-.118.06v.12h-.06c-.02.057-.038.117-.058.175l-.118.06v.117c-.06.04-.118.08-.177.118v.118l-.237.177v.118l-.59.53-.532.592h-.117c-.06.078-.118.156-.177.236l-.177.06-.06.117h-.118l-.06.118-.176.06v.058h-.118l-.06.118-.353.12-.06.117c-.078.02-.156.04-.235.058v.06c-.118.038-.236.078-.354.118v.058H8.76v.06h-.12v.06h-.176v.058h-.118v.06H8.17v.058H7.99v.06l-.413.058v.06h-.237c-.667.22-1.455.293-2.36.293h-.886v-.058h-.53v-.06H3.27v-.06h-.295v-.06H2.68v-.057h-.177v-.06h-.236v-.058H2.09v-.06h-.177v-.058h-.177v-.06H1.56v-.058h-.12v-.06l-.294-.06v-.057c-.118-.04-.236-.08-.355-.118v-.06H.674v-.058H.555v-.06H.437v-.058H.32l-.06-.12H.142v-.058c-.13-.08-.083.026-.177-.118H1.56v-.06c.294-.04.59-.077.884-.117v-.06h.177v-.058h.237v-.06h.118v-.06h.177v-.057h.118v-.06h.177v-.058l.236-.06v-.058l.236-.06c.02-.038.04-.078.058-.117l.237-.06c.02-.04.04-.077.058-.117h.118l.06-.118h.118c.036-.025.047-.078.118-.118V12.1c-1.02-.08-1.84-.54-2.303-1.183-.08-.058-.157-.118-.236-.176v-.117l-.118-.06v-.117c-.115-.202-.268-.355-.296-.65.453.004.987.008 1.354-.06v-.06c-.254-.008-.47-.08-.65-.175v-.058H2.32v-.06c-.08-.02-.157-.04-.236-.058l-.06-.118h-.117l-.118-.178h-.12c-.077-.098-.156-.196-.235-.294l-.118-.06v-.117l-.177-.12c-.35-.502-.6-1.15-.59-2.006h.06c.204.234.948.377 1.357.415v-.06c-.257-.118-.676-.54-.827-.768V5.9l-.118-.06c-.04-.117-.08-.236-.118-.354h-.06v-.118H.787c-.04-.196-.08-.394-.118-.59-.06-.19-.206-.697-.118-1.005h.06V3.36h.058v-.177h.06v-.177h.057V2.83h.06c.04-.118.078-.236.117-.355h.118v.06c.12.097.237.196.355.295v.118l.118.058c.08.098.157.197.236.295l.176.06.354.413h.118l.177.236h.118l.06.117h.117c.04.06.08.118.118.177h.118l.06.118.235.06.06.117.356.12.06.117.53.176v.06h.118v.058l.236.06v.06c.118.02.236.04.355.058v.06h.177v.058h.177v.06h.176v.058h.236v.06l.472.057v.06l1.417.18v-.237c-.1-.112-.058-.442-.057-.65 0-.573.15-.99.354-1.358v-.117l.118-.06.06-.235.176-.118v-.118c.14-.118.276-.236.414-.355l.06-.117h.117l.12-.177.235-.06.06-.117h.117v-.058H9.7v-.058h.177v-.06h.177v-.058h.177v-.06h.296v-.058h1.063v.058h.294v.06h.177v.058h.178v.06h.177v.058h.118v.06h.118l.06.117c.08.018.158.038.236.058.04.06.08.118.118.177h.118l.06.117c.142.133.193.163.472.178.136-.12.283-.05.472-.118v-.06h.177v-.058h.177v-.06l.236-.058v-.06h.177l.59-.352v.176h-.058l-.06.295h-.058v.117h-.06v.118l-.117.06v.118l-.177.118v.117l-.118.06-.354.412h-.117l-.177.236h.06c.13-.112.402-.053.59-.117l1.063-.353","vkontakte":"15.4 12.8h-1.8c-.7 0-.9-.5-2.1-1.7-1-1-1.5-1.1-1.7-1.1-.4 0-.5.1-.5.6v1.6c0 .4-.1.7-1.3.7-1.9 0-3.9-1.1-5.3-3.2C.6 6.5 0 4.2 0 3.7c0-.3.1-.5.6-.5h1.8c.4 0 .6.2.8.7C4 6.4 5.4 8.6 6 8.6c.2 0 .3-.1.3-.7V5.4c0-1.2-.6-1.3-.6-1.7 0-.2.2-.4.4-.4h2.8c.4 0 .5.2.5.6v3.5c0 .4.2.5.3.5.2 0 .4-.1.8-.5 1.3-1.4 2.2-3.6 2.2-3.6.1-.3.3-.5.8-.5h1.8c.5 0 .6.3.5.6-.2 1-2.4 4-2.4 4-.2.3-.3.4 0 .8.2.3.8.8 1.2 1.3.8.8 1.3 1.6 1.5 2.1 0 .4-.2.7-.7.7","gplus":"8,6.5v3h4.291c-0.526,2.01-2.093,3.476-4.315,3.476C5.228,12.976,3,10.748,3,8c0-2.748,2.228-4.976,4.976-4.976c1.442,0,2.606,0.623,3.397,1.603L13.52,2.48C12.192,0.955,10.276,0,8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s7.5-3.582,7.5-8V6.5H8","odnoklassniki":"8 2.6c.9 0 1.7.7 1.7 1.7C9.7 5.2 9 6 8 6c-.9 0-1.7-.7-1.7-1.7S7.1 2.6 8 2.6zm0 5.7c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm1.6 3.2c.8-.2 1.6-.5 2.3-1 .5-.3.7-1.1.4-1.6-.3-.6-1.1-.7-1.6-.4-1.6 1-3.8 1-5.4 0-.6-.3-1.3-.1-1.6.4-.4.6-.2 1.3.3 1.7.7.5 1.5.8 2.3 1l-2.2 2.2c-.5.5-.5 1.2 0 1.7.2.2.5.3.8.3.3 0 .6-.1.8-.3L8 13.2l2.2 2.2c.5.5 1.2.5 1.7 0s.5-1.2 0-1.7l-2.3-2.2","pocket":"12.533 6.864L8.77 10.4c-.213.2-.486.3-.76.3-.273 0-.547-.1-.76-.3L3.488 6.865c-.437-.41-.45-1.09-.032-1.52.42-.428 1.114-.443 1.55-.032l3.006 2.823 3.004-2.823c.438-.41 1.132-.396 1.55.032.42.43.406 1.11-.03 1.52zm3.388-4.928c-.207-.56-.755-.936-1.363-.936H1.45C.854 1 .31 1.368.096 1.917.032 2.08 0 2.25 0 2.422v4.73l.055.94c.232 2.14 1.366 4.01 3.12 5.314.03.024.063.047.094.07l.02.013c.94.673 1.992 1.13 3.128 1.353.524.104 1.06.157 1.592.157.492 0 .986-.045 1.472-.133.058-.01.116-.022.175-.034.016-.003.033-.01.05-.018 1.088-.233 2.098-.677 3.003-1.326l.02-.015c.032-.022.064-.045.096-.07 1.753-1.303 2.887-3.173 3.12-5.312l.054-.94v-4.73c0-.165-.02-.327-.08-.487","telegram":"12.4 4.2L6.6 9.6c-.2.2-.3.4-.4.7L6 11.8c0 .2-.3.2-.3 0l-.8-2.6c-.1-.4.1-.7.3-.8l7-4.3c.2-.2.4 0 .2.1zm2.9-3L.5 6.9c-.4.1-.4.7 0 .8L4.1 9l1.4 4.5c.1.3.4.4.7.2l2-1.6c.2-.2.5-.2.7 0l3.6 2.6c.3.2.6 0 .7-.3l2.6-12.8c.1-.2-.2-.5-.5-.4","whatsapp":"15.8 7.8c0 4.2-3.4 7.6-7.6 7.6-1.3 0-2.6-.3-3.7-.9L.3 15.8l1.4-4.1C1 10.6.6 9.2.6 7.8.6 3.6 4 .2 8.2.2c4.2 0 7.6 3.4 7.6 7.6M8.1 1.4c-3.5 0-6.4 2.9-6.4 6.4 0 1.4.5 2.7 1.2 3.7l-.8 2.4 2.5-.8c1 .7 2.2 1.1 3.5 1.1 3.5 0 6.4-2.9 6.4-6.4.1-3.5-2.8-6.4-6.4-6.4M12 9.5c0-.1-.2-.1-.4-.2s-1.1-.5-1.3-.6c-.2-.1-.3-.1-.4.1-.1.2-.4.6-.6.7-.1.1-.2.1-.4 0-.1 0-.8-.2-1.5-.8-.6-.5-.9-1.1-1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3 0-.2 0-.3-.1-.4 0-.1-.4-1-.6-1.4-.1-.3-.3-.2-.4-.2h-.4c-.1 0-.3 0-.5.2-.1.2-.6.6-.6 1.5s.7 1.8.8 1.9c.1.1 1.3 2.1 3.2 2.8 1.9.7 1.9.5 2.2.5.3 0 1.1-.4 1.3-.9.1-.4.1-.8.1-.9","viber":"13.7 6.7c0 .3.1.7-.3.8-.6.1-.5-.4-.5-.8-.4-2.3-1.2-3.2-3.5-3.7-.4-.1-.9 0-.8-.5.1-.5.5-.4.9-.3 2.3.3 4.2 2.3 4.2 4.5zM8.8 1.2c3.7.6 5.5 2.4 5.9 6.1 0 .3-.1.9.4.9s.4-.5.4-.9c0-3.6-3.1-6.8-6.7-7-.2.1-.8-.1-.8.5 0 .4.4.3.8.4zm5.7 10.2c-.5-.4-1-.7-1.5-1.1-1-.7-1.9-.7-2.6.4-.4.6-1 .6-1.6.4-1.7-.8-2.9-1.9-3.7-3.6-.3-.7-.3-1.4.5-1.9.4-.3.8-.6.8-1.2 0-.8-2-3.5-2.7-3.7-.3-.1-.6-.1-1 0C.9 1.2.2 2.7.9 4.4c2.1 5.2 5.8 8.8 11 11 .3.1.6.2.8.2 1.2 0 2.5-1.1 2.9-2.2.3-1-.5-1.5-1.1-2zM9.7 4c-.2 0-.5 0-.6.3-.1.4.2.5.5.5.9.2 1.4.7 1.5 1.7 0 .3.2.5.4.4.3 0 .4-.3.4-.6 0-1.1-1.2-2.3-2.2-2.3","email":"12.7 1c1 .5 1.8 1.2 2.3 2.2.5.9.8 1.9.8 3.1 0 .9-.1 1.8-.5 2.7-.3.9-.8 1.6-1.4 2.2-.6.6-1.4.9-2.3.9-.6 0-1.1-.2-1.5-.5-.4-.3-.6-.7-.7-1.2-.6 1.1-1.5 1.6-2.5 1.6-.8 0-1.5-.3-1.9-.8-.5-.6-.7-1.3-.7-2.2 0-.8.1-1.6.4-2.5S5.5 5 6.1 4.4c.7-.6 1.5-.8 2.6-.8.5 0 1 .1 1.4.2.5.1.9.3 1.3.6l-.7 4.9v.3c0 .2 0 .4.1.5.1.1.3.2.5.2.4 0 .8-.2 1.1-.7.3-.4.5-1 .7-1.6.1-.7.2-1.3.2-1.9 0-1.3-.4-2.3-1.1-3-.8-.7-1.9-1-3.4-1s-2.7.4-3.7 1.1c-.9.7-1.6 1.6-2 2.6S2.6 7.9 2.6 9c0 .9.2 1.8.6 2.5.4.7 1 1.3 1.7 1.7.7.4 1.7.6 2.7.6.5 0 1-.1 1.6-.2.6-.1 1.1-.3 1.5-.4l.4 1.9c-.6.2-1.2.4-1.8.5-.7.1-1.3.2-1.9.2-1.4 0-2.7-.3-3.8-.9s-1.9-1.4-2.5-2.4S.2 10.3.2 9c0-1.3.3-2.7 1-4 .6-1.4 1.6-2.5 3-3.4C5.5.7 7.2.2 9.2.2c1.3 0 2.5.3 3.5.8zm-4 8.4l.6-3.9c-.3-.1-.5-.2-.7-.2-.7 0-1.2.4-1.5 1.2-.3.8-.5 1.7-.5 2.6 0 .8.3 1.2.8 1.2s.9-.3 1.3-.9","more":"14.725 6.667H9.333V1.275C9.333.57 8.738 0 8 0S6.667.57 6.667 1.275v5.392H1.275C.57 6.667 0 7.262 0 8s.57 1.334 1.275 1.334h5.392v5.393C6.667 15.43 7.262 16 8 16s1.333-.57 1.333-1.273V9.334h5.392C15.43 9.334 16 8.738 16 8s-.57-1.333-1.275-1.333"};
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7332,7 +7922,7 @@ utils.set(window, 'ODKL.updateCount', function (index, counter) {
 module.exports = odnoklassniki;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7366,7 +7956,7 @@ module.exports = vkontakte;
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 /**
@@ -7384,7 +7974,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7410,7 +8000,7 @@ module.exports = twitter;
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7432,7 +8022,7 @@ var gplus = {
 module.exports = gplus;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7450,7 +8040,7 @@ var pocket = {
 module.exports = pocket;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 /**
@@ -7464,7 +8054,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports) {
 
 /**
@@ -7478,7 +8068,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 /**
@@ -7492,7 +8082,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7510,7 +8100,7 @@ var email = {
 module.exports = email;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var config = __webpack_require__(1);
@@ -7521,11 +8111,11 @@ module.exports = {
 };
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var services = __webpack_require__(9),
-    Factory  = __webpack_require__(57),
+    Factory  = __webpack_require__(58),
     utils    = __webpack_require__(4),
     dom      = __webpack_require__(3);
 
@@ -7565,7 +8155,7 @@ module.exports = function (service, url, options) {
 };
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 /**
@@ -7605,7 +8195,7 @@ module.exports = function (value) {
 };
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7737,7 +8327,7 @@ var isElementInDom = exports.isElementInDom = function isElementInDom(el) {
 };
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
