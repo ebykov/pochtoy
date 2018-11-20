@@ -115,7 +115,7 @@
   top: 10px;
   right: 20px;
   width: 100px;
-  height: 35px;
+  height: 34px;
   color: #000 !important;
   border: 0 !important;
   -webkit-transition: opacity 0.2s;
@@ -129,8 +129,11 @@
   .pochtoy__logo {
     top: 20px;
     right: 30px;
-    width: 160px;
-    height: 65px;
+  }
+}
+@media (min-width: 640px) and (max-width: 960px) {
+  .pochtoy.is-result .pochtoy__logo {
+    right: calc((100% - 640px) / 2 + 30px);
   }
 }
 .pochtoy__logo:hover {
@@ -483,6 +486,12 @@
   position: absolute;
   z-index: 2;
   bottom: 50px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 @media (min-width: 640px) {
   .pochtoy-lot__img {
