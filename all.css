@@ -214,6 +214,7 @@
 .pochtoy-enter__text p {
   padding: 0;
   margin: 0 !important;
+  font-family: inherit;
 }
 .pochtoy-enter__text p:not(:last-child) {
   margin-bottom: 0.833em !important;
@@ -317,6 +318,7 @@
 .pochtoy-q__promo-text p {
   padding: 0;
   margin: 0 !important;
+  font-family: inherit;
 }
 .pochtoy-q__promo-text p:not(:last-child) {
   margin-bottom: 0.833em !important;
@@ -779,6 +781,7 @@
 .pochtoy-result__text p {
   padding: 0;
   margin: 0 !important;
+  font-family: inherit;
 }
 .pochtoy-result__text p:not(:last-child) {
   margin-bottom: 0.833em !important;

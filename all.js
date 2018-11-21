@@ -1,4 +1,4 @@
-var PSB =
+var Pochtoy =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -5254,7 +5254,7 @@ var App = function (_Component) {
         { className: mainClassName },
         (0, _preact.h)(
           'a',
-          { href: 'https://www.pochtoy.com/', target: '_blank', className: 'pochtoy__logo' },
+          { href: 'http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018', target: '_blank', className: 'pochtoy__logo' },
           (0, _preact.h)(
             'svg',
             { viewBox: '0 0 1945.95 667' },
@@ -5385,11 +5385,11 @@ var Enter = function (_Component) {
               (0, _preact.h)(
                 'p',
                 null,
-                '\u0421\u043A\u043E\u0440\u043E \xAB\u0427\u0451\u0440\u043D\u0430\u044F \u043F\u044F\u0442\u043D\u0438\u0446\u0430\xBB \u2014 \u0432\u0440\u0435\u043C\u044F, \u043A\u043E\u0433\u0434\u0430 \u043B\u044E\u0434\u0438 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0430\u044E\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u044B \u0438 \u0434\u0440\u0443\u0433 \u0434\u0440\u0443\u0433\u0430 \u0440\u0430\u0434\u0438 \u0441\u043C\u0430\u0440\u0442\u0444\u043E\u043D\u043E\u0432 \u0437\u0430 ',
+                '\u0421\u043A\u043E\u0440\u043E \xAB\u0427\u0451\u0440\u043D\u0430\u044F \u043F\u044F\u0442\u043D\u0438\u0446\u0430\xBB \u2014 \u0432\u0440\u0435\u043C\u044F, \u043A\u043E\u0433\u0434\u0430 \u043B\u044E\u0434\u0438 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0430\u044E\u0442 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u044B \u0438 \u0434\u0440\u0443\u0433 \u0434\u0440\u0443\u0433\u0430 \u0440\u0430\u0434\u0438 \u0441\u043A\u0438\u0434\u043E\u043A \u043F\u043E\u0434 ',
                 (0, _preact.h)(
                   'span',
                   { style: 'color: #FF3939; font-weight: 700;' },
-                  '9 999'
+                  '90%'
                 ),
                 '. \u041F\u043E\u0440\u0430 \u0443\u0437\u043D\u0430\u0442\u044C, \u043D\u0430 \u0447\u0442\u043E \u0432\u044B \u0433\u043E\u0442\u043E\u0432\u044B \u043F\u043E\u0439\u0442\u0438 \u0440\u0430\u0434\u0438 \u043D\u0430\u0436\u0438\u0432\u044B \u0438 \u0441\u043C\u043E\u0436\u0435\u0442\u0435 \u043B\u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u043E\u043B\u044E\u0431\u0438\u0435.'
               ),
@@ -5448,7 +5448,7 @@ exports.default = {
     lot: 'Новые «умные» часы за 29 000 рублей',
     img: 'https://leonardo.osnova.io/051a67c7-0fd7-77a8-1e28-2a18d828ddd6/',
     price: 29000,
-    promo: '<p>Одна пара <a href="https://www.reddit.com/r/AskReddit/comments/1re0rl/retail_employees_of_reddit_what_are_your_black/cdmfyn7/" target="_blank">простояла</a> в очереди у магазина Target 14 часов. Попав внутрь, они прошли мимо полок с техникой и набили корзину бумажными полотенцами по $2 за упаковку.</p><p>С Pochtoy.com стоять в очередях не нужно. Товары со скидкой — в том числе часы — можно <a href="https://www.pochtoy.com/shops/watches-and-jewelry/" target="_blank">заказать</a> из США.</p>'
+    promo: '<p>Одна пара <a href="https://www.reddit.com/r/AskReddit/comments/1re0rl/retail_employees_of_reddit_what_are_your_black/cdmfyn7/" target="_blank">простояла</a> в очереди у магазина Target 14 часов. Попав внутрь, они прошли мимо полок с техникой и набили корзину бумажными полотенцами по $2 за упаковку.</p><p>С <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> стоять в очередях не нужно. Товары со скидкой — в том числе часы — можно <a href="https://www.pochtoy.com/shops/watches-and-jewelry/" target="_blank">заказать</a> из США.</p>'
   }, {
     act: 'Отобрать последнюю игровую консоль у ребёнка в очереди',
     lot: 'Игровая консоль последнего поколения за 39 000 рублей',
@@ -5464,7 +5464,7 @@ exports.default = {
     lot: 'Флагманский планшет со стилусом за 86 000 рублей',
     img: 'https://leonardo.osnova.io/4cf9e8d4-ef44-77c7-f102-a99528eb68b1/',
     price: 86000,
-    promo: '<p>В 2005 году отчаявшиеся сотрудники Walmart во Флориде стали <a href="https://www.brainjet.com/random/2355420/15-worst-black-friday-incidents/" target="_blank">кидать</a> ноутбуки в толпу покупателей, а те в ответ устроили потасовку с охраной.</p><p>С Pochtoy всё проще — технику можно со скидкой <a href="https://www.pochtoy.com/shops/electronics/" target="_blank">заказать</a> в крупных американских магазинах вроде легендарного Radioshack или Newegg.</p>'
+    promo: '<p>В 2005 году отчаявшиеся сотрудники Walmart во Флориде стали <a href="https://www.brainjet.com/random/2355420/15-worst-black-friday-incidents/" target="_blank">кидать</a> ноутбуки в толпу покупателей, а те в ответ устроили потасовку с охраной.</p><p>С <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> всё проще — технику можно со скидкой <a href="https://www.pochtoy.com/shops/electronics/" target="_blank">заказать</a> в крупных американских магазинах вроде легендарного Radioshack или Newegg.</p>'
   }, {
     act: 'Пофлиртовать с усатым охранником склада',
     lot: 'Игровой ноутбук за 98 000 рублей',
@@ -6153,8 +6153,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  name: 'PSB', // уникальное имя спецпроекта. Оно же — название главного класса. Используется на странице, куда интегрируется спецпроект
-  analyticsCategory: 'PSB',
+  name: 'Pochtoy', // уникальное имя спецпроекта. Оно же — название главного класса. Используется на странице, куда интегрируется спецпроект
+  analyticsCategory: 'Pochtoy',
   sendPageView: false, // отключаем, если спецпроект не на отдельной странице
   listenedEvents: ['click', 'input'] // слушаем события (click, input, change, etc.). Обычно нужен только click
 };
@@ -6320,8 +6320,15 @@ var Question = function (_Component) {
         this.craneOffsetY = this.crane.offsetHeight;
         craneDefaultStyles.transform = 'translate3d(0, ' + -this.craneOffsetY + 'px, 0)';
       }
-
-      console.log(this.craneOffsetY);
+    }
+  }, {
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate(nextProps, nextState) {
+      if (nextState.showPromo) {
+        craneDefaultStyles.transform = 'translate3d(0, ' + -1000 + 'px, 0)';
+      } else {
+        craneDefaultStyles.transform = 'translate3d(0, ' + -this.craneOffsetY + 'px, 0)';
+      }
     }
   }, {
     key: 'componentDidUpdate',
@@ -6340,6 +6347,8 @@ var Question = function (_Component) {
         return;
       }
 
+      Analytics.sendEvent('Option - ' + value);
+
       this.setState({
         answerValue: value
       });
@@ -6347,13 +6356,19 @@ var Question = function (_Component) {
   }, {
     key: 'continue',
     value: function _continue() {
+      var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
       if (this.state.answerValue === undefined) {
         return;
       }
 
-      this.answered = true;
+      if (type === 'promo') {
+        Analytics.sendEvent('Next From Promo');
+      } else if (type === 'usual') {
+        Analytics.sendEvent('Next');
+      }
 
-      Analytics.sendEvent('Continue');
+      this.answered = true;
 
       if (this.state.answerValue && !this.state.grabbing) {
         window.scroll({
@@ -6428,6 +6443,8 @@ var Question = function (_Component) {
   }, {
     key: 'result',
     value: function result() {
+      Analytics.sendEvent('Result');
+
       _store2.default.dispatch({
         type: 'TEST_STATUS',
         status: 'RESULT'
@@ -6498,7 +6515,9 @@ var Question = function (_Component) {
             (0, _preact.h)('div', { className: 'pochtoy-q__promo-text', dangerouslySetInnerHTML: { __html: props.test.question.promo } }),
             (0, _preact.h)(
               'button',
-              { className: 'pochtoy-q__promo-btn', onClick: _this2.continue },
+              { className: 'pochtoy-q__promo-btn', onClick: function onClick(e) {
+                  return _this2.continue('promo');
+                } },
               '\u0414\u0430\u043B\u0435\u0435'
             )
           )
@@ -6523,7 +6542,7 @@ var Question = function (_Component) {
             (0, _preact.h)(
               'div',
               { className: 'pochtoy-q__label' },
-              '\u0427\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C:'
+              '\u0427\u0442\u043E \u043C\u043D\u0435 \u043D\u0430\u0434\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C:'
             ),
             (0, _preact.h)(
               'div',
@@ -6533,7 +6552,7 @@ var Question = function (_Component) {
             (0, _preact.h)(
               'div',
               { className: 'pochtoy-q__label' },
-              '\u041B\u043E\u0442:'
+              '\u0417\u0430 \u044D\u0442\u043E \u044F \u043F\u043E\u043B\u0443\u0447\u0443:'
             ),
             (0, _preact.h)(
               'div',
@@ -6608,7 +6627,7 @@ var Question = function (_Component) {
             (0, _preact.h)(
               'div',
               { className: 'pochtoy-q__label pochtoy-q__label--options' },
-              '\u0420\u0430\u0437\u043C\u0435\u0440 \u0441\u043A\u0438\u0434\u043A\u0438:'
+              '\u041F\u0440\u0438 \u0443\u0441\u043B\u043E\u0432\u0438\u0438, \u0447\u0442\u043E \u0441\u043A\u0438\u0434\u043A\u0430 \u0431\u0443\u0434\u0435\u0442:'
             ),
             (0, _preact.h)(
               'div',
@@ -6620,7 +6639,9 @@ var Question = function (_Component) {
               { className: 'pochtoy-q__btn' },
               (0, _preact.h)(
                 'button',
-                { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: this.continue },
+                { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: function onClick(e) {
+                    return _this2.continue('usual');
+                  } },
                 props.test.activeIndex < props.test.questionsCount - 1 ? 'Согласен' : 'Результат'
               )
             )
@@ -7272,7 +7293,7 @@ var Result = function (_Component) {
               '\u0421 \u043F\u043E\u043C\u043E\u0449\u044C\u044E ',
               (0, _preact.h)(
                 'a',
-                { href: 'https://pochtoy.com', target: '_blank' },
+                { href: 'http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018', target: '_blank' },
                 'Pochtoy.com'
               ),
               ' \u043C\u043E\u0436\u043D\u043E \u0437\u0430\u043A\u0443\u043F\u0438\u0442\u044C\u0441\u044F \u0432\u043E \u0432\u0440\u0435\u043C\u044F \u043F\u043E\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043B\u044C\u0441\u043A\u043E\u0433\u043E \u0431\u0435\u0437\u0443\u043C\u0438\u044F: \u0441\u0435\u0440\u0432\u0438\u0441 \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0430\u043C\u0435\u0440\u0438\u043A\u0430\u043D\u0441\u043A\u0438\u0439 \u043F\u043E\u0447\u0442\u043E\u0432\u044B\u0439 \u0430\u0434\u0440\u0435\u0441 \u0434\u043B\u044F \u0437\u0430\u043A\u0430\u0437\u043E\u0432 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442-\u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\u0445 \u0421\u0428\u0410 \u0438 \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0442 \u0432\u0441\u0435 \u043F\u043E\u043A\u0443\u043F\u043A\u0438 \u0432 \u043E\u0434\u043D\u0443 \u043F\u043E\u0441\u044B\u043B\u043A\u0443, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442 \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u044E.'
@@ -7280,7 +7301,7 @@ var Result = function (_Component) {
           ),
           (0, _preact.h)(
             'a',
-            { href: 'https://pochtoy.com', target: '_blank', className: 'pochtoy-result__btn' },
+            { href: 'http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018', target: '_blank', className: 'pochtoy-result__btn' },
             '\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u043E\u0441\u0442\u0438'
           )
         )
