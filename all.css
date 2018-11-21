@@ -346,6 +346,7 @@
   color: #999;
 }
 .pochtoy-q__label--options {
+  margin-bottom: 10px;
   text-align: center;
 }
 @media (min-width: 640px) {
