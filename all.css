@@ -214,7 +214,7 @@
 .pochtoy-enter__text p {
   padding: 0;
   margin: 0 !important;
-  font-family: inherit;
+  font-size: inherit;
 }
 .pochtoy-enter__text p:not(:last-child) {
   margin-bottom: 0.833em !important;
@@ -318,7 +318,7 @@
 .pochtoy-q__promo-text p {
   padding: 0;
   margin: 0 !important;
-  font-family: inherit;
+  font-size: inherit;
 }
 .pochtoy-q__promo-text p:not(:last-child) {
   margin-bottom: 0.833em !important;
@@ -419,18 +419,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 206px;
-  height: 110px;
   margin: -12px 0 0 -40px;
 }
 .pochtoy-options__item {
+  width: 50%;
   padding: 12px 0 0 40px;
+}
+.pochtoy-options__item--full {
+  width: 100%;
+  text-align: center;
 }
 .pochtoy-option {
   position: relative;
@@ -782,7 +782,7 @@
 .pochtoy-result__text p {
   padding: 0;
   margin: 0 !important;
-  font-family: inherit;
+  font-size: inherit;
 }
 .pochtoy-result__text p:not(:last-child) {
   margin-bottom: 0.833em !important;
