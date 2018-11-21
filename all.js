@@ -5483,7 +5483,7 @@ exports.default = {
     img: 'https://leonardo.osnova.io/28ac8c03-742a-2880-abe2-ab28001ac534/',
     price: 39000
   }, {
-    act: 'Притвориться инвалидом',
+    act: 'Притвориться смертельно больным',
     lot: 'Ультраширокий 4К-монитор',
     img: 'https://leonardo.osnova.io/84be7672-fbec-36fa-b7c1-87bd4f2933ca/',
     price: 48000
@@ -6660,7 +6660,7 @@ var Question = function (_Component) {
             (0, _preact.h)(
               'div',
               { className: 'pochtoy-q__label pochtoy-q__label--options' },
-              '\u041F\u0440\u0438 \u0443\u0441\u043B\u043E\u0432\u0438\u0438, \u0447\u0442\u043E \u0441\u043A\u0438\u0434\u043A\u0430 \u0431\u0443\u0434\u0435\u0442:'
+              '\u0421\u043E\u0433\u043B\u0430\u0448\u0443\u0441\u044C, \u0435\u0441\u043B\u0438 \u0441\u043A\u0438\u0434\u043A\u0430 \u0431\u0443\u0434\u0435\u0442:'
             ),
             (0, _preact.h)(
               'div',
@@ -6675,7 +6675,7 @@ var Question = function (_Component) {
                 { className: 'pochtoy-btn' + (state.answerValue === undefined ? ' is-disabled' : ''), onClick: function onClick(e) {
                     return _this2.continue('usual');
                   } },
-                props.test.activeIndex < props.test.questionsCount - 1 ? 'Согласен' : 'Результат'
+                props.test.activeIndex < props.test.questionsCount - 1 ? 'Решено' : 'Завершено'
               )
             )
           )
