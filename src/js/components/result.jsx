@@ -2,12 +2,15 @@ import { h, Component } from 'preact';
 import { connect } from 'preact-redux';
 import store from '../store';
 // import { Transition } from 'react-transition-group';
-// import * as Analytics from '../lib/analytics';
+import * as Analytics from '../lib/analytics';
 import * as Share from '../lib/share';
+import Svg from '../svg';
 
 class Result extends Component {
   constructor() {
     super();
+
+    this.restart = this.restart.bind(this);
   }
 
   componentDidMount() {
@@ -24,8 +27,15 @@ class Result extends Component {
     });
   }
 
+  restart() {
+    Analytics.sendEvent('Restart');
+
+    store.dispatch({
+      type: 'TEST_RESTART',
+    });
+  }
+
   render(props, state) {
-    console.log(props.test.answers);
     const getResult = () => {
       const userResults = props.test.results;
       const answers = props.test.answers;
@@ -56,20 +66,28 @@ class Result extends Component {
           <div className="pochtoy-result__block">
             <div className="pochtoy-result__title">Я этичнее {result}%<br/>пользователей TJ</div>
             <div className="pochtoy-result__share pochtoy-result__share--dark" ref={el => this.shareMoral = el} />
+            <div className="pochtoy-result__restart" onClick={this.restart}>
+              <span>Переиграть</span>
+              <span dangerouslySetInnerHTML={{ __html: Svg.refresh }} />
+            </div>
             <img src="https://leonardo.osnova.io/f0862130-b772-cf33-cf69-7e4dbc2a8465/" alt="" className="pochtoy-result__img"/>
           </div>
           <div className="pochtoy-result__block pochtoy-result__block--a">
             <div className="pochtoy-result__title pochtoy-result__title--a">Я аморальнее {100-result}%<br/>пользователей TJ</div>
             <div className="pochtoy-result__share" ref={el => this.shareAmoral = el} />
+            <div className="pochtoy-result__restart pochtoy-result__restart--a" onClick={this.restart}>
+              <span>Переобуться</span>
+              <span dangerouslySetInnerHTML={{ __html: Svg.refresh }} />
+            </div>
             <img src="https://leonardo.osnova.io/230588fc-b0b6-6d8a-fafa-1d86a6977980/" alt="" className="pochtoy-result__img pochtoy-result__img--a"/>
           </div>
         </div>
         <div className="pochtoy-result__bottom">
           <div className="pochtoy-result__text">
             <p>Решать моральные дилеммы не нужно, если заказывать товары из-за рубежа, сидя дома — в США скидки на «Чёрную пятницу» достигают 80%.</p>
-            <p>С помощью <a href="https://pochtoy.com" target="_blank">Pochtoy.com</a> можно закупиться во время потребительского безумия: сервис предоставляет американский почтовый адрес для заказов в интернет-магазинах США и собирает все покупки в одну посылку, которая приходит получателю.</p>
+            <p>С помощью <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> можно закупиться во время потребительского безумия: сервис предоставляет американский почтовый адрес для заказов в интернет-магазинах США и собирает все покупки в одну посылку, которая приходит получателю.</p>
           </div>
-          <a href="https://pochtoy.com" target="_blank" className="pochtoy-result__btn">Подробности</a>
+          <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank" className="pochtoy-result__btn">Подробности</a>
         </div>
       </div>
     );

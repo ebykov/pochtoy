@@ -45,7 +45,7 @@ class Enter extends Component {
           <div style={{ ...defaultStyle, ...transitionStyles[state] }} className="pochtoy-enter">
             <div className="pochtoy-enter__title">На что вы готовы ради скидки?</div>
             <div className="pochtoy-enter__text">
-              <p>Скоро «Чёрная пятница» — время, когда люди уничтожают магазины и друг друга ради смартфонов за <span style="color: #FF3939; font-weight: 700;">9&thinsp;999</span>. Пора узнать, на что вы готовы пойти ради наживы и сможете ли сохранить человеколюбие.</p>
+              <p>Скоро «Чёрная пятница» — время, когда люди уничтожают магазины и друг друга ради скидок под <span style="color: #FF3939; font-weight: 700;">90%</span>. Пора узнать, на что вы готовы пойти ради наживы и сможете ли сохранить человеколюбие.</p>
               <p>Выберите скидку, ради которой вы готовы совершить неприглядный поступок или пострадать. Всё абсолютно анонимно, так что можно не стесняться.</p>
             </div>
             <div className="pochtoy-enter__btn">

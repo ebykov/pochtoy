@@ -3,11 +3,9 @@ import { h, render } from 'preact';
 import { Provider, connect } from 'preact-redux';
 import App from './components/app';
 import store from './store';
-// import request from './lib/request';
+import request from './lib/request';
 import * as Analytics from "./lib/analytics";
-//
-// const IMAGES = [];
-//
+
 export default class Special {
   constructor(params = {}) {
     this.params = params;
@@ -53,6 +51,16 @@ export default class Special {
     store.dispatch({
       type: 'TEST_PARAMS',
       params: this.params,
+    });
+
+    request('/special/pochtoy/getResults').then(r => {
+      const resp = JSON.parse(r);
+      if (resp.rc === 200 && resp.data.length) {
+        store.dispatch({
+          type: 'TEST_SET_RESULTS',
+          results: resp.data,
+        });
+      }
     });
 
     render(<Special />, this.container);

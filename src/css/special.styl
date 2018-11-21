@@ -40,6 +40,7 @@ $colors = {
   &-btn
     width: 150px
     height: 45px
+    padding: 0 10px
     color: $colors.red
     font-family: Montserrat, sans-serif
     font-size: 17px
@@ -54,6 +55,15 @@ $colors = {
 
       @media (hover none), (hover on-demand)
         opacity: 1
+
+    &.is-disabled
+      filter: grayscale(1)
+      opacity: .6
+      cursor: default
+
+      &:hover
+        @media (hover none), (hover on-demand)
+          opacity: .6
 
   &-hands
     position: absolute
@@ -79,12 +89,23 @@ $colors = {
     z-index: 2
     top: 10px
     right: 20px
+    width: 100px
+    height: 34px
+    color: #000 !important
     border: 0 !important
     transition: opacity .2s
 
+    & svg
+      width: 100%
+      height: 100%
+
     @media (min-width: 640px)
-      top: 42px
-      right: 35px
+      top: 20px
+      right: 30px
+
+    ^[0].is-result &
+      @media (min-width: 640px) and (max-width: 960px)
+        right: calc((100% - 640px) / 2 + 30px)
 
     &:hover
       opacity: .6
@@ -96,14 +117,15 @@ $colors = {
     position: relative
     z-index: 1
     display: flex
+    align-items: flex-start
     width: 100%
     padding: 10px
-    border: 4px solid #000
     background-color: #fff
     //overflow: hidden
 
     @media (min-width: 640px)
       min-height: 600px
+      border: 4px solid #000
 
     &--result
       width: 640px
@@ -148,6 +170,7 @@ $colors = {
       & p
         padding: 0
         margin: 0 !important
+        font-size: inherit
 
         &:not(:last-child)
           margin-bottom: 0.833em !important
@@ -160,58 +183,74 @@ $colors = {
 
   &-q
     position: relative
-    width: 560px
-    max-width: 100%
-    margin: 40px auto 0
+    display: flex
+    align-items: flex-start
+    width: 100%
+    height: 100%
 
-    @media (min-width: 640px)
-      margin-top: 60px
+    &__pager
+      position: absolute
+      top: 5px
+      left: 0
+      font-family: Montserrat, sans-serif
+      font-size: 18px
+      font-weight: 700
+
+      @media (min-width: 640px)
+        top: 15px
+        left: 20px
+
+    &__inner
+      position: relative
+      margin: 40px auto 0
+
+      @media (min-width: 640px)
+        width: 560px
+        max-width: 100%
+        min-height: 442px
+        margin-top: 60px
 
     &__promo
       position: absolute
+      z-index: 4
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(255,255,255,.9)
+
+    &__promo-inner
+      position: absolute
       z-index: 1
-      top: 220px
-      left: 140px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
       width: 320px
       max-width: 100%
       padding: 20px 26px 22px
       border: 4px solid #000
       background-color: #fff
 
-    &__promo-close
-      position: absolute
-      top: 4px
-      right: 4px
-      width: 16px
-      height: 16px
-      transform rotate(45deg)
-      cursor: pointer
-      transition opacity .2s
+    &__promo-btn
+      width: 82px
+      height: 26px
+      padding: 0 10px
+      margin: 16px 0 0
+      color: #000
+      font-size: 12px
+      border: 1px solid #000
+      background-color: #fff
+      transition color .2s, background-color .2s
 
       &:hover
-        opacity: .6
-
-        @media (hover none), (hover on-demand)
-          opacity: 1
-
-      &::before
-      &::after
-        content: ''
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
-        margin: auto
+        color: #fff
         background-color: #000
 
-      &::before
-        width: 2px
-        height: 100%
-
-      &::after
-        width: 100%
-        height: 2px
+        @media (hover none), (hover on-demand)
+          color: #000
+          background-color: #fff
 
     &__promo-text
       color: #000
@@ -221,6 +260,7 @@ $colors = {
       & p
         padding: 0
         margin: 0 !important
+        font-size: inherit
 
         &:not(:last-child)
           margin-bottom: 0.833em !important
@@ -240,23 +280,31 @@ $colors = {
       width: 310px
       max-width: 100%
 
+    &__label
+      margin-bottom: 6px
+      color: #999
+
+      &--options
+        margin-bottom: 10px
+        text-align: center
+
+        @media (min-width: 640px)
+          text-align: left
+
+      &:not(:first-child)
+        margin-top: 20px
+
     &__title
       color: $colors.red
       font-family: Montserrat, sans-serif
       font-size: 20px
       font-weight: 700
-      line-height: 1.467em
-
-      @media $mq.desktop
-        font-size: 30px
+      line-height: 1.45em
 
     &__subtitle
-      margin-top: 12px
-      color: #808080
-      line-height: 1.2em
-
-      @media $mq.desktop
-        font-size: 24px
+      color: #333
+      font-size: 18px
+      line-height: 1.6em
 
     &__lot
       position: relative
@@ -271,33 +319,13 @@ $colors = {
 
     &__options
       display: flex
-      flex-wrap wrap
-      width: 225px
-      padding-top: 20px
-      margin: 0 auto
+      justify-content: center
 
       @media (min-width: 640px)
-        display: block
-        width: auto
-        padding-top: 40px
-        margin: 0
-
-    &__option
-      width: 50%
-      padding: 10px 0 0 20px
-
-      &--full
-        width: 100%
-
-      @media (min-width: 640px)
-        width: auto
-        padding: 0
-
-        &:not(:last-child)
-          margin-bottom: 20px
+        justify-content: flex-start
 
     &__btn
-      margin-top: 30px
+      margin-top: 20px
       text-align: center
 
       @media (min-width: 640px)
@@ -306,13 +334,27 @@ $colors = {
     &__notice
       width: 160px
       max-width: 100%
+      min-height: 48px
       margin: 10px auto 0
       color: #808080
       font-size: 14px
       text-align: center
 
+  &-options
+    display: flex
+    flex-direction: column
+    flex-wrap wrap
+    //width: 254px
+    width: 206px
+    height: 110px
+    margin: -12px 0 0 -40px
+
+    &__item
+      padding: 12px 0 0 40px
+
   &-option
     position: relative
+    display: inline-block
     color: #000
     cursor: pointer
 
@@ -322,17 +364,12 @@ $colors = {
     &__btn
       position: absolute
       z-index: 1
-      top: 4px
+      top: 3px
       left: 0
       width: 16px
       height: 16px
       border: 2px solid currentColor
       border-radius: 100%
-
-      @media (min-width: 640px)
-        top: 6px
-        width: 20px
-        height: 20px
 
       ^[-1].is-active &
         &::after
@@ -348,17 +385,9 @@ $colors = {
           border-radius: 100%
           background-color currentColor
 
-          @media (min-width: 640px)
-            width: 10px
-            height: 10px
-
     &__label
       margin-left: 30px
-      font-size: 22px
-
-      @media (min-width: 640px)
-        margin-left: 42px
-        font-size: 28px
+      font-size: 18px
 
   &-lot
     border: 4px solid currentColor
@@ -377,11 +406,53 @@ $colors = {
 
     &__img
       position: absolute
+      z-index: 2
       bottom: 50px
-      left: 55px
+      transform: translate3d(0,0,0)
+      transform-style: preserve-3d
+
+      &--1
+        left: 55px
+        width: 105px
+
+      &--2
+        left: 68px
+        width: 80px
+
+      &--3
+        bottom: 44px
+        left: 60px
+        width: 90px
+
+      &--4
+        left: 6px
+        width: 206px
+
+      &--5
+        left: 22px
+        width: 172px
+
+      &--6
+        left: 18px
+        width: 177px
+
+      &--7
+        left: 6px
+        width: 206px
+
+      &--8
+        left: 22px
+        bottom: 34px
+        width: 162px
 
       @media (min-width: 640px)
         bottom: 70px
+
+        &--3
+          bottom: 64px
+
+        &--8
+          bottom: 56px
 
     &__bottom
       display: flex
@@ -417,15 +488,19 @@ $colors = {
 
   &-crane
     position: absolute
-    z-index: 1
-    top: -274px
+    z-index: 3
+    top: 0
     left: 0
     right: 0
     margin: 0 auto
-    width: 57px
+    width: 58px
+    height: 97px
+    transform: translate3d(0,0,0)
+    transform-style: preserve-3d
+    transition: transform 1s
 
-    @media (min-width: 640px)
-      top: -92px
+    &--back
+      z-index: 1
 
     &::before
       content: ''
@@ -435,31 +510,64 @@ $colors = {
       right: 0
       margin: 0 auto
       width: 2px
-      height: 100px
+      height: 500px
       background-color: #FF0C0C
+      transform: translate3d(0,0,0)
+      transform-style: preserve-3d
 
-    &__main
+    &__grabber
+      position: relative
+      z-index: 2
       display: block
       width: 100%
+      transform: translate3d(0,0,0)
+      transform-style: preserve-3d
+
+    &__claw
+      position: absolute
+      z-index: 1
+      transform: translate3d(0,0,0)
+      transform-style: preserve-3d
+
+      &--b
+        width: 8px
+        top: 86px
+        right: 8px
+
+      &--l
+        width: 36px
+        top: 80px
+        left: -32px
+        transform-origin: top right
+
+      &--r
+        width: 29px
+        top: 78px
+        right: -19px
+        transform-origin: top left
 
   &-result
     max-width: 100%
 
     &__main
-      border: 4px solid #000
+
+      @media (min-width: 640px)
+        border: 4px solid #000
 
     &__bottom
       margin-top: 8px
       padding: 10px 14px
-      border: 5px solid #000
       background-color: #fff
+
+      @media (min-width: 640px)
+        border: 5px solid #000
 
       @media $mq.not_mobile
         padding: 40px 65px 45px
 
     &__block
       position: relative
-      padding: 50px 10px 10px
+      padding: 50px 20px 10px
       background-color: #fff
       overflow: hidden
 
@@ -467,7 +575,7 @@ $colors = {
         padding: 35px 20px 20px 60px
 
       &--a
-        padding: 10px
+        padding: 10px 20px
         background-color: #000
 
         @media $mq.not_mobile
@@ -478,18 +586,28 @@ $colors = {
       position: absolute
       bottom: 0
       right: 0
+      width: 41%
+      max-width: 169px
 
       &--a
         top: 0
         bottom: auto
+        width: 35%
+        max-width: 150px
 
     &__title
       position: relative
       z-index: 1
       font-family: Montserrat, sans-serif
-      font-size: 24px
+      font-size: 20px
       font-weight: 700
       line-height: 1.5em
+
+      @media $mq.iphone6
+        font-size: 22px
+
+      @media (min-width: 480px)
+        font-size: 24px
 
       @media $mq.not_mobile
         font-size: 30px
@@ -506,6 +624,30 @@ $colors = {
       &--dark
         color: #000
 
+    &__restart
+      position: relative
+      z-index: 1
+      display: inline-flex
+      align-items: center
+      margin-top: 22px
+      color: #000
+      line-height: 1
+      cursor: pointer
+      opacity: .65
+      transition: opacity .2s
+
+      &--a
+        color: #fff
+
+      & svg
+        margin-left: 5px
+
+      &:hover
+        opacity: 1
+
+        @media (hover none), (hover on-demand)
+          opacity: .65
+
     &__text
       color: #000
       line-height: 1.5em
@@ -513,6 +655,7 @@ $colors = {
       & p
         padding: 0
         margin: 0 !important
+        font-size: inherit
 
         &:not(:last-child)
           margin-bottom: 0.833em !important
@@ -607,5 +750,5 @@ $colors = {
       display: none
       line-height: 1
 
-      @media $mq.not_mobile
+      @media (min-width: 480px)
         display: block
