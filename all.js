@@ -7226,23 +7226,27 @@ var Result = function (_Component) {
       var getResult = function getResult() {
         var userResults = props.test.results;
         var answers = props.test.answers;
-        var result = 0;
 
-        userResults.forEach(function (item, i) {
-          var total = 0;
-          var amoral = 0;
-          for (var k in item) {
-            if (item.hasOwnProperty(k)) {
-              total += item[k];
-              if (parseInt(answers[i]) <= parseInt(k)) {
-                amoral += item[k];
+        if (userResults) {
+          var _result = 0;
+          userResults.forEach(function (item, i) {
+            var total = 0;
+            var amoral = 0;
+            for (var k in item) {
+              if (item.hasOwnProperty(k)) {
+                total += item[k];
+                if (parseInt(answers[i]) <= parseInt(k)) {
+                  amoral += item[k];
+                }
               }
             }
-          }
-          result += Math.round(amoral / total * 100);
-        });
+            _result += Math.round(amoral / total * 100);
+          });
 
-        return Math.round(result / props.test.questionsCount);
+          return Math.round(_result / props.test.questionsCount);
+        }
+
+        return 100;
       };
 
       var result = getResult();
