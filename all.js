@@ -5448,7 +5448,7 @@ exports.default = {
     lot: 'Новые «умные» часы за 29 000 рублей',
     img: 'https://leonardo.osnova.io/051a67c7-0fd7-77a8-1e28-2a18d828ddd6/',
     price: 29000,
-    promo: '<p>Одна пара <a href="https://www.reddit.com/r/AskReddit/comments/1re0rl/retail_employees_of_reddit_what_are_your_black/cdmfyn7/" target="_blank">простояла</a> в очереди у магазина Target 14 часов. Попав внутрь, они прошли мимо полок с техникой и набили корзину бумажными полотенцами по $2 за упаковку.</p><p>С <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> стоять в очередях не нужно. Товары со скидкой — в том числе часы — можно <a href="https://www.pochtoy.com/shops/watches-and-jewelry/" target="_blank">заказать</a> из США.</p>'
+    promo: '<p>Одна пара <a href="https://www.reddit.com/r/AskReddit/comments/1re0rl/retail_employees_of_reddit_what_are_your_black/cdmfyn7/" target="_blank">простояла</a> в очереди у магазина Target 14 часов. Попав внутрь, они прошли мимо полок с техникой и набили корзину бумажными полотенцами по $2 за упаковку.</p><p>С <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> стоять в очередях не нужно. Товары со скидкой — в том числе часы — можно <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">заказать</a> из США.</p>'
   }, {
     act: 'Отобрать последнюю игровую консоль у ребёнка в очереди',
     lot: 'Игровая консоль последнего поколения за 39 000 рублей',
@@ -5464,7 +5464,7 @@ exports.default = {
     lot: 'Флагманский планшет со стилусом за 86 000 рублей',
     img: 'https://leonardo.osnova.io/4cf9e8d4-ef44-77c7-f102-a99528eb68b1/',
     price: 86000,
-    promo: '<p>В 2005 году отчаявшиеся сотрудники Walmart во Флориде стали <a href="https://www.brainjet.com/random/2355420/15-worst-black-friday-incidents/" target="_blank">кидать</a> ноутбуки в толпу покупателей, а те в ответ устроили потасовку с охраной.</p><p>С <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> всё проще — технику можно со скидкой <a href="https://www.pochtoy.com/shops/electronics/" target="_blank">заказать</a> в крупных американских магазинах вроде легендарного Radioshack или Newegg.</p>'
+    promo: '<p>В 2005 году отчаявшиеся сотрудники Walmart во Флориде стали <a href="https://www.brainjet.com/random/2355420/15-worst-black-friday-incidents/" target="_blank">кидать</a> ноутбуки в толпу покупателей, а те в ответ устроили потасовку с охраной.</p><p>С <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">Pochtoy.com</a> всё проще — технику можно со скидкой <a href="http://pochtoy.com/black-friday-2018/?utm_source=tjournal&utm_medium=test&utm_campaign=black-friday-2018" target="_blank">заказать</a> в крупных американских магазинах вроде легендарного Radioshack или Newegg.</p>'
   }, {
     act: 'Пофлиртовать с усатым охранником склада',
     lot: 'Игровой ноутбук за 98 000 рублей',
